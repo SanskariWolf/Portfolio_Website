@@ -1,0 +1,426 @@
+.frame-24,
+.frame-24 * {
+    box-sizing: border-box;
+}
+
+.frame-24 {
+    padding: 0px 60px 0px 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.frame-25 {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.frame-56 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.badges {
+    color: #000000;
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+
+.frame-57 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.ellipse-3 {
+    background: #d9d9d9;
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    position: relative;
+}
+
+.ellipse-4 {
+    background: #d9d9d9;
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    position: relative;
+}
+
+.ellipse-5 {
+    background: #d9d9d9;
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    position: relative;
+}
+
+.frame-58 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-59 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.most-recent {
+    color: #000000;
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+
+.most-commented {
+    color: #000000;
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+
+.most-upvotes {
+    color: #000000;
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+
+.frame-26 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.frame-55 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.frame-53 {
+    background: linear-gradient(to left, #000000, #000000);
+    border-radius: 10px;
+    padding: 48px 35px 48px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-shrink: 0;
+    height: 466px;
+    position: relative;
+    overflow: hidden;
+}
+
+.frame-35 {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.ellipse-1 {
+    background: #d9d9d9;
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    aspect-ratio: 1;
+}
+
+.frame-532 {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.hephaestus-guild {
+    color: #ffffff;
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+._1st-runner-up-at-iiit-nagpur-design-a-thons {
+    color: #ffffff;
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 10px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.frame-37 {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.rectangle-11 {
+    border-radius: 9px;
+    flex-shrink: 0;
+    width: 300px;
+    height: 150px;
+    position: relative;
+    object-fit: cover;
+}
+
+.vipul-prtyaksh-tanush {
+    color: #ffffff;
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 12px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.lorem-ipsum {
+    color: #ffffff;
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 12px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.frame-36 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 266px;
+    position: relative;
+}
+
+.frame-28 {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 6px 12px 6px 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.foundation-arrow-up {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+._120 {
+    color: #000000;
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 16px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.foundation-arrow-up2 {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.frame-29 {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 6px 12px 6px 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.proicons-comment {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.frame-352 {
+    background: linear-gradient(to left, #000000, #000000);
+    border-radius: 10px;
+    padding: 48px 35px 48px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-shrink: 0;
+    height: 466px;
+    position: relative;
+    overflow: hidden;
+}
+
+.foundation-arrow-up3 {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.foundation-arrow-up4 {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.proicons-comment2 {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.frame-54 {
+    background: linear-gradient(to left, #000000, #000000);
+    border-radius: 10px;
+    padding: 48px 35px 48px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-shrink: 0;
+    height: 466px;
+    position: relative;
+    overflow: hidden;
+}
+
+.foundation-arrow-up5 {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.foundation-arrow-up6 {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.proicons-comment3 {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}

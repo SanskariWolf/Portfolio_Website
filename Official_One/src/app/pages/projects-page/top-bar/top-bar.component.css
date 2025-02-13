@@ -1,0 +1,195 @@
+.main,
+.main * {
+box-sizing: border-box;
+}
+.main {
+padding: 0px 90px 0px 90px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+align-self: stretch;
+flex-shrink: 0;
+position: relative;
+}
+
+
+.frame-48 {
+  background: #d3d3a1;
+  border-radius: 10px;
+  padding: 15px 30px 15px 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  }
+  .icon-park-outline-search {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  }
+  .group {
+  width: 78.56%;
+  height: 78.56%;
+  position: absolute;
+  right: 13.11%;
+  left: 8.33%;
+  bottom: 13.11%;
+  top: 8.33%;
+  overflow: visible;
+  }
+  .search {
+  color: #000000;
+  text-align: left;
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 14px;
+  letter-spacing: -0.24px;
+  font-weight: 400;
+  position: relative;
+  }
+  .frame-31 {
+  background: #d3d3a1;
+  border-radius: 30px;
+  padding: 6px 15px 6px 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  }
+  .frame-47 {
+  border-radius: 30px;
+  padding: 9px 15px 9px 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  }
+  .upcoming-project {
+  color: #000000;
+  text-align: left;
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 11px;
+  letter-spacing: -0.24px;
+  font-weight: 400;
+  position: relative;
+  }
+  .frame-45 {
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 6px 15px 6px 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  }
+  .active-project {
+  color: #000000;
+  text-align: left;
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 11px;
+  letter-spacing: -0.24px;
+  font-weight: 400;
+  position: relative;
+  }
+  .frame-46 {
+  border-radius: 30px;
+  padding: 9px 15px 9px 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  }
+  .archive-project {
+  color: #000000;
+  text-align: left;
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 11px;
+  letter-spacing: -0.24px;
+  font-weight: 400;
+  position: relative;
+  }
+  .frame-32 {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  }
+  .frame-50 {
+  background: #d3d3a1;
+  border-radius: 21px;
+  padding: 9px 15px 9px 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  }
+  .clarity-new-solid {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+  }
+  .newest {
+  color: #000000;
+  text-align: left;
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 11px;
+  letter-spacing: -0.24px;
+  font-weight: 400;
+  position: relative;
+  }
+  .frame-49 {
+  background: #d3d3a1;
+  border-radius: 21px;
+  padding: 9px 15px 9px 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  }
+  .mynaui-filter-solid {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+  }
+  .filter {
+  color: #000000;
+  text-align: left;
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 11px;
+  letter-spacing: -0.24px;
+  font-weight: 400;
+  position: relative;
+  }

@@ -1,0 +1,133 @@
+:host, .main,
+.main * {
+  box-sizing: border-box;
+}
+
+.main {
+    padding: 0px 60px 0px 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-21 {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 462px;
+    height: 519px;
+    position: relative;
+    box-shadow: 9px 9px 4px 0px rgba(0, 0, 0, 1.00);
+    object-fit: cover;
+}
+
+.frame-22 {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: 1;
+    position: relative;
+}
+
+.frame-20 {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.a-few-words-about-me {
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 64px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.a-few-words-about-me-span {
+    color: #000000;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 64px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+}
+
+.a-few-words-about-me-span2 {
+    color: #ff6f00;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 64px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+}
+
+.frame-60 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.your-friendly-neighbourhood-guy-by-profession-a-programmer-by-hobbies-and-artist-by-community-a-streamer-and-and-editor {
+    color: #000000;
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 16px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+
+.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-ut-enim-ad-minim-veniam-quis-nostrud-exercitation-ullamco-laboris-nisi-ut-aliquip-ex-ea-commodo-consequat-duis-aute-irure-dolor-in-reprehenderit-in-voluptate-velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur-excepteur-sint-occaecat-cupidatat-non-proident-sunt-in-culpa-qui-officia-deserunt-mollit-anim-id-est-laborum {
+    color: #000000;
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 16px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+
+.frame-15 {
+    background: #d9d9d9;
+    padding: 19px 37px 19px 37px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 180px;
+    height: 63px;
+    position: relative;
+}
+
+.download-cv {
+    color: #000000;
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 16px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
