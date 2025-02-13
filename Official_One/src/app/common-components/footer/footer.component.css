@@ -1,0 +1,233 @@
+.footer,
+.footer * {
+    box-sizing: border-box;
+}
+
+.footer {
+    background: #333333;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-43 {
+    padding: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.quick-links {
+    color: #ff6f61;
+    text-align: center;
+    font-family: 'Manrope-Bold', sans-serif;
+    font-size: 32px;
+    letter-spacing: -0.24px;
+    font-weight: 700;
+    position: relative;
+}
+
+.frame-42 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.home {
+    color: #ffffff;
+    text-align: left;
+    font-family: 'Manrope-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.about-me {
+    color: #ffffff;
+    text-align: left;
+    font-family: 'Manrope-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.blog {
+    color: #ffffff;
+    text-align: left;
+    font-family: 'Manrope-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.projects {
+    color: #ffffff;
+    text-align: left;
+    font-family: 'Manrope-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.achievements {
+    color: #ffffff;
+    text-align: left;
+    font-family: 'Manrope-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.contact-me {
+    color: #ffffff;
+    text-align: left;
+    font-family: 'Manrope-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.line-1 {
+    margin-top: -1px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 1px 0 0 0;
+    flex-shrink: 0;
+    width: 300px;
+    height: 0px;
+    position: relative;
+    transform-origin: 0 0;
+    transform: rotate(90.391deg) scale(1, 1);
+}
+
+.frame-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.subscribe-to-my-blog {
+    color: #ff6f61;
+    text-align: left;
+    font-family: 'Manrope-Bold', sans-serif;
+    font-size: 32px;
+    letter-spacing: -0.24px;
+    font-weight: 700;
+    position: relative;
+    align-self: stretch;
+}
+
+.frame-5 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 789px;
+    position: relative;
+}
+
+.frame-2 {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 11px 30px 11px 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 577px;
+    height: 50px;
+    position: relative;
+}
+
+.enter-your-email {
+    color: #333333;
+    text-align: left;
+    font-family: 'Manrope-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.frame-1 {
+    background: #ff6f61;
+    border-radius: 10px;
+    padding: 11px 42px 11px 42px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 182px;
+    height: 50px;
+    position: relative;
+}
+
+.subscribe {
+    color: #ffffff;
+    text-align: left;
+    font-family: 'Manrope-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.frame-44 {
+    background: #000000;
+    padding: 3px 0px 3px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    justify-content: center;
+}
+
+._2025-all-right-reserve {
+    color: #ffffff;
+    text-align: left;
+    font-family: 'Manrope-Bold', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 700;
+    position: relative;
+}

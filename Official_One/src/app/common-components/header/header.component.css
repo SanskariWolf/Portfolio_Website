@@ -1,0 +1,227 @@
+.header,
+.header * {
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 30px 60px 30px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-18 {
+    padding: 0px 30px 0px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-16 {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.fa-brands-wolf-pack-battalion {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-39 {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.tanush-purwar-sanskari-wolf {
+    color: #333333;
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 24px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.a-tech-and-art-enthusiast {
+    color: #333333;
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.frame-17 {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-end;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.write-me {
+    color: #333333;
+    text-align: right;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.tanushpurwar-gmail-com {
+    color: #333333;
+    text-align: right;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+    position: relative;
+}
+
+.line-2 {
+    margin-top: -1px;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px 0 0 0;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 0px;
+    position: relative;
+}
+
+.frame-20 {
+    padding: 0px 30px 0px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-6 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.home-link {
+  color: #333333;
+  text-align: left;
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 20px;
+  letter-spacing: -0.24px;
+  font-weight: 400;
+  text-decoration: none; /* Remove default underline */
+  position: relative;
+  padding-bottom: 5px; /* Space for the underline effect */
+}
+
+/* Hover effect */
+.home-link:hover {
+  text-decoration: underline;
+}
+
+/* Active state (when on the current page) */
+.active-link {
+  text-decoration: underline;
+}
+
+
+.frame-19 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.hugeicons-instagram {
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.group {
+    flex-shrink: 0;
+    width: 23.75px;
+    height: 23.75px;
+    position: relative;
+    overflow: visible;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.tabler-brand-leetcode {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    overflow: visible;
+}

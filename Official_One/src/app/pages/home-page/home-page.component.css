@@ -1,0 +1,14 @@
+:host, .main,
+.main * {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.main {
+  background: #f5f5dc;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: flex-start;
+  width: 100%;
+  }

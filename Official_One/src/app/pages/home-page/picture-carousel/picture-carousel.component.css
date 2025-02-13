@@ -1,0 +1,16 @@
+.frame-40,
+.frame-40 * {
+    box-sizing: border-box;
+}
+
+.frame-40 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    object-fit: cover;
+}
