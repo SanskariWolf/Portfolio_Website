@@ -3,225 +3,104 @@
     box-sizing: border-box;
 }
 
+/* Apply a clean modern style */
 .header {
-    padding: 30px 60px 30px 60px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
+  background: #f5f5dc;  /* Beige background */
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .frame-18 {
-    padding: 0px 30px 0px 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
+/* Profile Section */
 .frame-16 {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    align-items: center;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.fa-brands-wolf-pack-battalion {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    height: auto;
-    position: relative;
-    overflow: visible;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .frame-39 {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .tanush-purwar-sanskari-wolf {
-    color: #333333;
-    text-align: left;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 24px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-    position: relative;
+  font-size: 20px;
+  color: #222; /* Darker for better contrast */
 }
 
 .a-tech-and-art-enthusiast {
-    color: #333333;
-    text-align: left;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 20px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-    position: relative;
+  font-size: 14px;
+  color: #444;
 }
 
+/* Contact Section */
 .frame-17 {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: flex-end;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
+  text-align: right;
 }
 
-.write-me {
-    color: #333333;
-    text-align: right;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 20px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-    position: relative;
-}
-
+.write-me,
 .tanushpurwar-gmail-com {
-    color: #333333;
-    text-align: right;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 20px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-    position: relative;
+  font-size: 14px;
+  color: #444;
 }
 
-.line-2 {
-    margin-top: -1px;
-    border-style: solid;
-    border-color: #000000;
-    border-width: 1px 0 0 0;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 0px;
-    position: relative;
-}
-
+/* Navigation Bar */
 .frame-20 {
-    padding: 0px 30px 0px 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 10px;
 }
 
 .frame-6 {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    align-items: center;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.home {
   display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  position: relative;
+  gap: 25px;
 }
 
 .home-link {
-  color: #333333;
-  text-align: left;
-  font-family: 'Poppins-Regular', sans-serif;
-  font-size: 20px;
-  letter-spacing: -0.24px;
-  font-weight: 400;
-  text-decoration: none; /* Remove default underline */
-  position: relative;
-  padding-bottom: 5px; /* Space for the underline effect */
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+  text-decoration: none;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
 }
 
-/* Hover effect */
 .home-link:hover {
-  text-decoration: underline;
+  border-bottom: 2px solid #222;
 }
 
-/* Active state (when on the current page) */
-.active-link {
-  text-decoration: underline;
-}
-
-
+/* Social Icons */
 .frame-19 {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-end;
-    flex-shrink: 0;
-    position: relative;
+  display: flex;
+  gap: 12px;
 }
 
-.hugeicons-instagram {
-    padding: 2px;
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-    overflow: hidden;
+.frame-19 svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease, fill 0.3s ease;
 }
 
-.group {
-    flex-shrink: 0;
-    width: 23.75px;
-    height: 23.75px;
-    position: relative;
-    overflow: visible;
+.frame-19 svg:hover {
+  transform: scale(1.1);
 }
 
-.frame {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    height: auto;
-    position: relative;
-    overflow: visible;
-}
-
-.tabler-brand-leetcode {
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    height: auto;
-    position: relative;
-    overflow: visible;
+/* Divider */
+.line-2 {
+  border-top: 2px solid #ccc;
+  width: 100%;
+  margin: 10px 0;
 }
