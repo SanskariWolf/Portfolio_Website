@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './skill-carousel.component.css'
 })
 export class SkillCarouselComponent {
-
+  constructor(){}
 }
