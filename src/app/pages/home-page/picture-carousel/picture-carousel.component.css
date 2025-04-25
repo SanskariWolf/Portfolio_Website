@@ -37,3 +37,29 @@
   padding: 20px;
 }
 
+.picture-carousel {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .picture-carousel {
+    height: 300px;
+  }
+}
+

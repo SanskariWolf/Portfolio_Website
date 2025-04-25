@@ -1,133 +1,150 @@
-:host, .main,
-.main * {
-  box-sizing: border-box;
+:host {
+  display: block;
+  width: 100%;
 }
 
 .main {
-    padding: 0px 60px 0px 60px;
-    display: flex;
-    flex-direction: row;
-    gap: 60px;
-    align-items: center;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
+  background: linear-gradient(135deg, #f5f5dc 0%, #f0f0e0 100%);
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.frame-21 {
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 462px;
-    height: 519px;
-    position: relative;
-    box-shadow: 9px 9px 4px 0px rgba(0, 0, 0, 1.00);
-    object-fit: cover;
+.about-section {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.frame-22 {
-    display: flex;
+.image-container {
+  flex: 1;
+  max-width: 462px;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: translateY(-5px);
+}
+
+.content-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.title-part {
+  display: block;
+  color: #2c3e50;
+}
+
+.title-part.highlight {
+  color: #ff6f00;
+  background: linear-gradient(45deg, #ff6f00, #ff8f00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.short-description {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+.long-description {
+  font-size: 1rem;
+  color: #34495e;
+  line-height: 1.8;
+}
+
+.download-button {
+  background: linear-gradient(45deg, #ff6f00, #ff8f00);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  box-shadow: 0 4px 15px rgba(255, 111, 0, 0.2);
+}
+
+.download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 111, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-section {
+    gap: 3rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 2rem 1rem;
+  }
+
+  .about-section {
     flex-direction: column;
-    gap: 26px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex: 1;
-    position: relative;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .image-container {
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .download-button {
+    margin: 0 auto;
+  }
 }
 
-.frame-20 {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
 
-.a-few-words-about-me {
-    text-align: left;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 64px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-    position: relative;
-}
+  .short-description {
+    font-size: 1.1rem;
+  }
 
-.a-few-words-about-me-span {
-    color: #000000;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 64px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-}
-
-.a-few-words-about-me-span2 {
-    color: #ff6f00;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 64px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-}
-
-.frame-60 {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.your-friendly-neighbourhood-guy-by-profession-a-programmer-by-hobbies-and-artist-by-community-a-streamer-and-and-editor {
-    color: #000000;
-    text-align: left;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 16px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-    position: relative;
-    align-self: stretch;
-}
-
-.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-ut-enim-ad-minim-veniam-quis-nostrud-exercitation-ullamco-laboris-nisi-ut-aliquip-ex-ea-commodo-consequat-duis-aute-irure-dolor-in-reprehenderit-in-voluptate-velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur-excepteur-sint-occaecat-cupidatat-non-proident-sunt-in-culpa-qui-officia-deserunt-mollit-anim-id-est-laborum {
-    color: #000000;
-    text-align: left;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 16px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-    position: relative;
-    align-self: stretch;
-}
-
-.frame-15 {
-    background: #d9d9d9;
-    padding: 19px 37px 19px 37px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 180px;
-    height: 63px;
-    position: relative;
-}
-
-.download-cv {
-    color: #000000;
-    text-align: left;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 16px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-    position: relative;
+  .long-description {
+    font-size: 0.9rem;
+  }
 }

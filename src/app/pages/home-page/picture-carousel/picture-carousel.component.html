@@ -1,1 +1,5 @@
-<img class="frame-40" src="../../../../assets/hero-section.png" />
+<div class="picture-carousel" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+  <div class="carousel-container">
+    <img [src]="currentImage.src" [alt]="currentImage.alt" class="carousel-image">
+  </div>
+</div>

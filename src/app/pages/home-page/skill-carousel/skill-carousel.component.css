@@ -4,424 +4,82 @@
 }
 
 .skilll-carousel {
-    padding: 0px 90px 0px 90px;
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
+    width: 100%;
+    overflow: hidden;
     position: relative;
-}
-
-.weui-arrow-outlined {
-    flex-shrink: 0;
-    width: 25px;
-    height: 50px;
-    position: relative;
-    overflow: visible;
+    padding: 20px 0;
 }
 
 .frame-41 {
     display: flex;
-    flex-direction: row;
-    gap: 30px;
-    align-items: flex-start;
+    gap: 20px;
+    will-change: transform;
+    padding: 0 20px;
+    animation-name: scrollLeft;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.frame-15, .frame-16, .frame-17, .frame-18, .frame-19, .frame-20, .frame-21 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    text-align: center;
     justify-content: flex-start;
-    flex: 1;
-    position: relative;
-    overflow-x: auto;
-}
-
-.frame-15 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: center;
     flex-shrink: 0;
     width: 150px;
-    position: relative;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e0d8c7;
 }
 
-.mingcute-web-fill {
-    flex-shrink: 0;
+.icon-container {
     width: 50px;
     height: 50px;
-    position: relative;
-    overflow: hidden;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.group {
-    width: 75%;
-    height: 82.56%;
-    position: absolute;
-    right: 12.5%;
-    left: 12.5%;
-    bottom: 0.78%;
-    top: 16.67%;
-    overflow: visible;
+.skill-icon {
+    max-width: 100%;
+    max-height: 100%;
+    color: #a09487;
 }
 
-.web-developer {
-    color: #000000;
-    text-align: left;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 20px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-    position: relative;
+.web-developer, .embedded-systems-io-t, .designer, .cyber-security, 
+.game-developer, .cad-designer, .block-chain-developer {
+    color: #5a4e44;
+    font-family: 'Poppins-SemiBold', sans-serif;
+    font-size: 1rem;
+    letter-spacing: normal;
+    font-weight: 600;
     align-self: stretch;
 }
 
-.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit {
-    color: #000000;
-    text-align: left;
+.skill-description {
+    color: #555;
     font-family: 'Poppins-Regular', sans-serif;
-    font-size: 10px;
-    letter-spacing: -0.24px;
+    font-size: 0.85rem;
+    letter-spacing: normal;
     font-weight: 400;
-    position: relative;
     align-self: stretch;
+    flex-grow: 1;
 }
 
-.frame-16 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 150px;
-    position: relative;
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); 
+  }
 }
 
-.eos-icons-iot {
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    overflow: visible;
-}
-
-.embedded-systems-io-t {
-    color: #000000;
-    text-align: left;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 20px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-    position: relative;
-    align-self: stretch;
-}
-
-.frame-17 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 150px;
-    position: relative;
-}
-
-.arcticons-sketchbook {
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    overflow: visible;
-}
-
-.designer {
-    color: #000000;
-    text-align: left;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 20px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-    position: relative;
-    align-self: stretch;
-}
-
-.frame-18 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 150px;
-    position: relative;
-}
-
-.simple-icons-cyberdefenders {
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    overflow: visible;
-}
-
-.cyber-security {
-    color: #000000;
-    text-align: left;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 20px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-    position: relative;
-    align-self: stretch;
-}
-
-.frame-19 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 150px;
-    position: relative;
-}
-
-.iconamoon-3-d {
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    overflow: hidden;
-}
-
-.group2 {
-    width: 64.95%;
-    height: 73.71%;
-    position: absolute;
-    right: 17.52%;
-    left: 17.52%;
-    bottom: 13.79%;
-    top: 12.5%;
-    overflow: visible;
-}
-
-.game-developer {
-    color: #000000;
-    text-align: left;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 20px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-    position: relative;
-    align-self: stretch;
-}
-
-.frame-20 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 150px;
-    position: relative;
-}
-
-.mdi-design {
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    overflow: visible;
-}
-
-.cad-designer {
-    color: #000000;
-    text-align: left;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 20px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-    position: relative;
-    align-self: stretch;
-}
-
-.frame-21 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 150px;
-    position: relative;
-}
-
-.hugeicons-blockchain-05 {
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    overflow: visible;
-    aspect-ratio: 1;
-}
-
-.block-chain-developer {
-    color: #000000;
-    text-align: left;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 20px;
-    letter-spacing: -0.24px;
-    font-weight: 400;
-    position: relative;
-    align-self: stretch;
-}
-
-.frame-22 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 150px;
-    position: relative;
-}
-
-.group3 {
-    width: 75%;
-    height: 82.56%;
-    position: absolute;
-    right: 12.5%;
-    left: 12.5%;
-    bottom: 0.78%;
-    top: 16.67%;
-    overflow: visible;
-}
-
-.frame-23 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 150px;
-    position: relative;
-}
-
-.eos-icons-iot2 {
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    overflow: visible;
-}
-
-.frame-24 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 150px;
-    position: relative;
-}
-
-.arcticons-sketchbook2 {
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    overflow: visible;
-}
-
-.frame-25 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 150px;
-    position: relative;
-}
-
-.simple-icons-cyberdefenders2 {
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    overflow: visible;
-}
-
-.frame-26 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 150px;
-    position: relative;
-}
-
-.group4 {
-    width: 64.95%;
-    height: 73.71%;
-    position: absolute;
-    right: 17.52%;
-    left: 17.52%;
-    bottom: 13.79%;
-    top: 12.5%;
-    overflow: visible;
-}
-
-.frame-27 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 150px;
-    position: relative;
-}
-
-.mdi-design2 {
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    overflow: visible;
-}
-
-.frame-28 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 150px;
-    position: relative;
-}
-
-.hugeicons-blockchain-052 {
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    overflow: visible;
-    aspect-ratio: 1;
-}
-
-.weui-arrow-outlined2 {
-    flex-shrink: 0;
-    width: 25px;
-    height: 50px;
-    position: relative;
-    overflow: visible;
+.skilll-carousel.is-hovered .frame-41 {
+    animation-play-state: paused;
 }
