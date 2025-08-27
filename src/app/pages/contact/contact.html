@@ -1,0 +1,103 @@
+<div class="contact-container">
+  <div class="contact-card">
+    <!-- Left Section -->
+    <div class="contact-info">
+      <h1 class="contact-title">Get In Touch</h1>
+      <div class="contact-details">
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <div class="contact-text">
+            <p class="contact-label">Email</p>
+            <a href="mailto:tanushpurwar@gmail.com" class="contact-link">
+              tanushpurwar@gmail.com
+            </a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📱</span>
+          <div class="contact-text">
+            <p class="contact-label">Phone</p>
+            <a href="tel:+919555263470" class="contact-link">
+              +91 9555263470
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="contact-form-section">
+      <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <div class="form-group">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form-input"
+            placeholder="Your Name"
+            [(ngModel)]="formData.name"
+            required
+            #nameField="ngModel"
+          />
+          <label for="name" class="form-label">Name</label>
+          <div class="error-message" *ngIf="nameField.invalid && nameField.touched">
+            Name is required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-input"
+            placeholder="your.email@example.com"
+            [(ngModel)]="formData.email"
+            required
+            email
+            #emailField="ngModel"
+          />
+          <label for="email" class="form-label">Email</label>
+          <div class="error-message" *ngIf="emailField.invalid && emailField.touched">
+            <span *ngIf="emailField.errors?.['required']">Email is required</span>
+            <span *ngIf="emailField.errors?.['email']">Please enter a valid email</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <textarea
+            id="message"
+            name="message"
+            class="form-input form-textarea"
+            placeholder="Your message here..."
+            rows="5"
+            [(ngModel)]="formData.message"
+            required
+            #messageField="ngModel"
+          ></textarea>
+          <label for="message" class="form-label">Message</label>
+          <div class="error-message" *ngIf="messageField.invalid && messageField.touched">
+            Message is required
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="submit-button"
+          [disabled]="contactForm.invalid || isSubmitting"
+        >
+          <span *ngIf="!isSubmitting">Send Message</span>
+          <span *ngIf="isSubmitting">Sending...</span>
+        </button>
+
+        <!-- Success/Error Messages -->
+        <div class="status-message success" *ngIf="submitStatus === 'success'">
+          ✅ Message sent successfully! I'll get back to you soon.
+        </div>
+        <div class="status-message error" *ngIf="submitStatus === 'error'">
+          ❌ Failed to send message. Please try again or contact me directly.
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

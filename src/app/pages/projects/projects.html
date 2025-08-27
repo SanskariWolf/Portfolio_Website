@@ -1,0 +1,55 @@
+<div class="projects-container">
+  <div class="filter-row">
+    <div class="filter-icon" (click)="toggleDropdown()">
+      <span>⚙️</span>
+    </div>
+
+    <div class="filter-dropdown">
+      <button class="dropdown-button" (click)="toggleDropdown()">
+        Filter Projects ▼
+      </button>
+      <div class="dropdown-menu" [class.active]="isDropdownOpen">
+        <div class="dropdown-item" (click)="selectAll()">Select All</div>
+        <div class="dropdown-item" (click)="deselectAll()">Deselect All</div>
+        <div class="dropdown-item" (click)="toggleFilter('webdev')">Web Development</div>
+        <div class="dropdown-item" (click)="toggleFilter('blockchain')">Blockchain</div>
+        <div class="dropdown-item" (click)="toggleFilter('database')">Database</div>
+        <div class="dropdown-item" (click)="toggleFilter('docker')">Docker/Kubernetes</div>
+        <div class="dropdown-item" (click)="toggleFilter('cybersecurity')">Cybersecurity</div>
+        <div class="dropdown-item" (click)="toggleFilter('uiux')">UI/UX</div>
+      </div>
+    </div>
+
+    <div class="filter-options">
+      <span
+        *ngFor="let filterOption of filterOptions"
+        class="filter-tag"
+        [class.active]="activeFilters.has(filterOption.key)"
+        [class.inactive]="!activeFilters.has(filterOption.key)"
+        (click)="toggleFilter(filterOption.key)">
+        {{ filterOption.label }}
+      </span>
+    </div>
+  </div>
+
+  <div class="projects-grid">
+    <div
+      *ngFor="let project of projects"
+      class="project-card"
+      [class.hidden]="!shouldShowProject(project)">
+
+      <div class="project-image">{{ project.image }}</div>
+      <div class="project-content">
+        <h3 class="project-title">{{ project.title }}</h3>
+        <p class="project-description">{{ project.description }}</p>
+        <div class="project-tags">
+          <span
+            *ngFor="let tag of project.tags"
+            class="project-tag">
+            {{ getTagLabel(tag) }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

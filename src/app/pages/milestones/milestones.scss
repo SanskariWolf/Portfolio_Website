@@ -1,0 +1,550 @@
+// Color Variables
+$bg-color: #f5f5dc;
+$primary-orange: #ff6b35;
+$secondary-orange: #fb986a;
+$light-orange: #f7c59f;
+$lightest-orange: #f6ddbe;
+$mint-green: #c8d6cd;
+$light-blue: #9ab7bd;
+$medium-blue: #7ba2b3;
+$dark-blue: #1a659e;
+$darkest-blue: #004e89;
+$black: #010b13;
+
+.milestones-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: $bg-color;
+  gap: 2rem;
+  padding: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+// Side Panel Styles
+.side-panel {
+  width: 280px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    position: static;
+    padding: 1.5rem;
+  }
+
+  .panel-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $darkest-blue;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, $darkest-blue, $dark-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .panel-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  .panel-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid transparent;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1rem;
+      text-align: center;
+      flex: 1;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    &.active {
+      background: linear-gradient(135deg, $primary-orange, $secondary-orange);
+      color: white;
+      box-shadow: 0 8px 25px rgba($primary-orange, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .panel-icon {
+      font-size: 1.5rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    .panel-label {
+      font-weight: 600;
+      font-size: 1rem;
+
+      @media (max-width: 768px) {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+
+// Content Area Styles
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.filter-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, $primary-orange, $secondary-orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba($primary-orange, 0.3);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba($primary-orange, 0.4);
+  }
+}
+
+.filter-dropdown {
+  position: relative;
+
+  .dropdown-button {
+    background: linear-gradient(135deg, $light-blue, $medium-blue);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba($light-blue, 0.3);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba($light-blue, 0.4);
+    }
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-item {
+      padding: 0.8rem 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      border-bottom: 1px solid #f0f0f0;
+
+      &:hover {
+        background-color: #f8f9fa;
+      }
+
+      &:first-child {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  flex: 1;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.filter-tag {
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+
+  &.active {
+    background: linear-gradient(135deg, $primary-orange, $secondary-orange);
+    color: white;
+    box-shadow: 0 4px 15px rgba($primary-orange, 0.3);
+    transform: translateY(-2px);
+  }
+
+  &.inactive {
+    background: #e9ecef;
+    color: #6c757d;
+    border: 2px solid #dee2e6;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+// Content Grid Styles
+.content-grid {
+  display: grid;
+  gap: 2rem;
+
+  &.achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  &.certifications-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &.badges-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+}
+
+// Achievement Card Styles
+.achievement-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  display: flex;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  &.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+  }
+
+  .achievement-image {
+    width: 300px;
+    height: 200px;
+    flex-shrink: 0;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .achievement-content {
+    padding: 2rem;
+    flex: 1;
+
+    @media (max-width: 768px) {
+      padding: 1.5rem;
+    }
+
+    .competition-info {
+      margin-bottom: 1.5rem;
+      position: relative;
+
+      .competition-name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $darkest-blue;
+        margin-bottom: 0.5rem;
+      }
+
+      .organizer {
+        color: #666;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .position-badge {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+
+        &.position-1st {
+          background: linear-gradient(135deg, #ffd700, #ffed4e);
+          color: #b8860b;
+        }
+
+        &.position-2nd {
+          background: linear-gradient(135deg, #c0c0c0, #e5e5e5);
+          color: #666;
+        }
+
+        &.position-3rd {
+          background: linear-gradient(135deg, #cd7f32, #daa520);
+          color: #8b4513;
+        }
+
+        &.position-winner {
+          background: linear-gradient(135deg, $primary-orange, $secondary-orange);
+          color: white;
+        }
+      }
+    }
+
+    .team-info {
+      margin-bottom: 1.5rem;
+
+      .team-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: $dark-blue;
+        margin-bottom: 0.5rem;
+      }
+
+      .team-members {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .team-member {
+          background: rgba($mint-green, 0.3);
+          color: $darkest-blue;
+          padding: 0.3rem 0.8rem;
+          border-radius: 12px;
+          font-size: 0.85rem;
+        }
+      }
+    }
+
+    .achievement-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+
+      .achievement-tag {
+        background: linear-gradient(135deg, $light-orange, $lightest-orange);
+        color: $darkest-blue;
+        padding: 0.4rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .achievement-description {
+      color: #555;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+// Certification Card Styles
+.certification-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
+
+  &.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+  }
+
+  .certification-image {
+    width: 100%;
+    height: 150px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .certification-content {
+    padding: 1.5rem;
+
+    .certification-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: $darkest-blue;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .issuing-org {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .certification-dates {
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+
+      .issue-date, .expiry-date, .lifetime-validity {
+        margin-bottom: 0.3rem;
+        color: #555;
+      }
+
+      .lifetime-validity {
+        color: $primary-orange;
+        font-weight: 600;
+      }
+    }
+
+    .certificate-id {
+      font-size: 0.8rem;
+      color: #666;
+      word-break: break-all;
+    }
+  }
+}
+
+// Badge Card Styles
+.badge-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
+
+  &.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+  }
+
+  .badge-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .badge-content {
+    .badge-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $darkest-blue;
+      line-height: 1.3;
+    }
+  }
+}

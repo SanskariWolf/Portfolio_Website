@@ -1,0 +1,157 @@
+<div class="milestones-container">
+  <!-- Side Panel -->
+  <div class="side-panel">
+    <h2 class="panel-title">Milestones</h2>
+    <div class="panel-options">
+      <div
+        class="panel-option"
+        [class.active]="selectedPanel === 'achievements'"
+        (click)="selectPanel('achievements')">
+        <span class="panel-icon">🏆</span>
+        <span class="panel-label">Achievements</span>
+      </div>
+      <div
+        class="panel-option"
+        [class.active]="selectedPanel === 'certifications'"
+        (click)="selectPanel('certifications')">
+        <span class="panel-icon">📜</span>
+        <span class="panel-label">Certifications</span>
+      </div>
+      <div
+        class="panel-option"
+        [class.active]="selectedPanel === 'badges'"
+        (click)="selectPanel('badges')">
+        <span class="panel-icon">🎖️</span>
+        <span class="panel-label">Badges</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="content-area">
+    <!-- Filter Row -->
+    <div class="filter-row">
+      <div class="filter-icon" (click)="toggleDropdown()">
+        <span>⚙️</span>
+      </div>
+
+      <div class="filter-dropdown">
+        <button class="dropdown-button" (click)="toggleDropdown()">
+          Filter {{ getCurrentSectionName() }} ▼
+        </button>
+        <div class="dropdown-menu" [class.active]="isDropdownOpen">
+          <div class="dropdown-item" (click)="selectAll()">Select All</div>
+          <div class="dropdown-item" (click)="deselectAll()">Deselect All</div>
+          <div
+            *ngFor="let option of getCurrentFilterOptions()"
+            class="dropdown-item"
+            (click)="toggleFilter(option.key)">
+            {{ option.label }}
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-options">
+        <span
+          *ngFor="let filterOption of getCurrentFilterOptions()"
+          class="filter-tag"
+          [class.active]="activeFilters.has(filterOption.key)"
+          [class.inactive]="!activeFilters.has(filterOption.key)"
+          (click)="toggleFilter(filterOption.key)">
+          {{ filterOption.label }}
+        </span>
+      </div>
+    </div>
+
+    <!-- Achievements Content -->
+    <div *ngIf="selectedPanel === 'achievements'" class="content-grid achievements-grid">
+      <div
+        *ngFor="let achievement of achievements"
+        class="achievement-card"
+        [class.hidden]="!shouldShowItem(achievement)">
+
+        <div class="achievement-image">
+          <img [src]="achievement.image" [alt]="achievement.competition" />
+        </div>
+
+        <div class="achievement-content">
+          <div class="competition-info">
+            <h3 class="competition-name">{{ achievement.competition }}</h3>
+            <p class="organizer">{{ achievement.organizer }}</p>
+            <div class="position-badge" [class]="'position-' + achievement.position.toLowerCase()">
+              {{ achievement.position }}
+            </div>
+          </div>
+
+          <div class="team-info">
+            <h4 class="team-name">{{ achievement.teamName }}</h4>
+            <div class="team-members">
+              <span *ngFor="let member of achievement.teamMembers" class="team-member">
+                {{ member }}
+              </span>
+            </div>
+          </div>
+
+          <div class="achievement-tags">
+            <span *ngFor="let tag of achievement.tags" class="achievement-tag">
+              {{ getTagLabel(tag) }}
+            </span>
+          </div>
+
+          <p class="achievement-description">{{ achievement.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications Content -->
+    <div *ngIf="selectedPanel === 'certifications'" class="content-grid certifications-grid">
+      <div
+        *ngFor="let cert of certifications"
+        class="certification-card"
+        [class.hidden]="!shouldShowItem(cert)">
+
+        <div class="certification-image">
+          <img [src]="cert.image" [alt]="cert.name" />
+        </div>
+
+        <div class="certification-content">
+          <h3 class="certification-name">{{ cert.name }}</h3>
+          <p class="issuing-org">{{ cert.issuingOrganization }}</p>
+
+          <div class="certification-dates">
+            <div class="issue-date">
+              <strong>Issued:</strong> {{ cert.issueDate }}
+            </div>
+            <div class="expiry-date" *ngIf="cert.expiryDate">
+              <strong>Expires:</strong> {{ cert.expiryDate }}
+            </div>
+            <div class="lifetime-validity" *ngIf="!cert.expiryDate">
+              <strong>Valid:</strong> Lifetime
+            </div>
+          </div>
+
+          <div class="certificate-id" *ngIf="cert.certificateId">
+            <strong>ID:</strong> {{ cert.certificateId }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Badges Content -->
+    <div *ngIf="selectedPanel === 'badges'" class="content-grid badges-grid">
+      <div
+        *ngFor="let badge of badges"
+        class="badge-card"
+        [class.hidden]="!shouldShowItem(badge)">
+
+        <div class="badge-image">
+          <img [src]="badge.image" [alt]="badge.name" />
+        </div>
+
+        <div class="badge-content">
+          <h3 class="badge-name">{{ badge.name }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

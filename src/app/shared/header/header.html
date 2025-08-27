@@ -1,0 +1,38 @@
+<header class="header-container">
+  <!-- Top Row -->
+  <div class="top-row">
+    <!-- Left Side -->
+    <div class="top-left">
+      <div class="logo">
+        <!-- Replace this placeholder with your actual SVG logo -->
+        <img src="./logo.svg" alt="Logo">
+      </div>
+      <div class="name-section">
+        <h1 class="name">Tanush Purwar | Sanskari Wolf</h1>
+        <p class="quote">"Crafting code, securing systems, and building the future."</p>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="top-right">
+      <p class="contact-text">Write me at</p>
+      <p class="contact-email">tanushpurwar@gmail.com</p>
+    </div>
+  </div>
+
+  <!-- Bottom Row -->
+  <nav class="bottom-row">
+    <ul class="nav-links" [class.open]="menuOpen">
+      <li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</li>
+      <li routerLink="/about" routerLinkActive="active">About Me</li>
+      <li routerLink="/projects" routerLinkActive="active">Projects</li>
+      <li routerLink="/milestones" routerLinkActive="active">Milestones</li>
+      <li routerLink="/contact" routerLinkActive="active">Contact Me</li>
+    </ul>
+    <div class="hamburger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>

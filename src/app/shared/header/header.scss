@@ -1,0 +1,269 @@
+.header-container {
+  width: 100%;
+  background-color: #f5f5dc; // main background
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(1, 11, 19, 0.1);
+  border-bottom: 4px solid #010b13;
+}
+
+/* --- Top Row --- */
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 2rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo img {
+  width: 120px;  // Made even bigger
+  height: 120px; // Made even bigger
+  border: none;  // No border
+  border-radius: 0; // No rounded corners
+  // Removed all transitions and hover effects
+}
+
+.name-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 1.6rem;
+  margin: 0;
+  color: #1a659e;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #1a659e, #004e89);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.quote {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #7ba2b3;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.top-right {
+  text-align: right;
+  padding: 0.5rem 1rem;
+}
+
+.contact-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #004e89;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.contact-email {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #ff6b35;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+/* --- Separator Line --- */
+.top-row::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+  right: 2rem;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    #9ab7bd 20%,
+    #1a659e 50%,
+    #9ab7bd 80%,
+    transparent 100%
+  );
+}
+
+/* --- Bottom Row --- */
+.bottom-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  background-color: #f5f5dc;
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-size: 1rem;
+  color: #010b13;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.nav-links li:hover {
+  color: #010b13;
+}
+
+.nav-links li:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #010b13;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-links li.active {
+  color: #ff6b35;
+}
+
+.nav-links li.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6b35;
+  bottom: 0;
+  left: 0;
+}
+
+/* --- Hamburger Menu --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, #1a659e, #004e89);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover span {
+  background: linear-gradient(90deg, #ff6b35, #fb986a);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .top-right {
+    display: none;
+  }
+
+  .quote {
+    display: none;
+  }
+
+  .top-row {
+    padding: 0.8rem 1rem;
+  }
+
+  .top-row::after {
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .bottom-row {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f5f5dc;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0;
+    gap: 0;
+    box-shadow: 0 4px 12px rgba(1, 11, 19, 0.1);
+    border-top: 1px solid #c8d6cd;
+  }
+
+  .nav-links.open {
+    max-height: 300px;
+    padding: 1rem 0;
+  }
+
+  .nav-links li {
+    margin: 0;
+    text-align: left;
+    padding: 0.8rem 2rem;
+    gap: 0;
+  }
+
+  .nav-links li:hover::after {
+    background-color: #010b13;
+  }
+
+  .nav-links li.active::after {
+    background-color: #ff6b35;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  // Logo adjustments for mobile
+  .logo img {
+    width: 85px;  // Bigger for mobile
+    height: 85px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-left {
+    gap: 0.8rem;
+  }
+
+  .logo img {
+    width: 75px;  // Bigger for very small screens
+    height: 75px;
+  }
+
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .nav-links li {
+    font-size: 0.85rem;
+  }
+}
