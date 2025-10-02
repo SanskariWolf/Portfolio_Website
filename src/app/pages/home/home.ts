@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SKILLS, Skill } from '../../data/skills';
 import { CommonModule } from '@angular/common';
+import { TESTIMONIALS, Testimonial } from './assets/testimonials';
 
 
 @Component({
@@ -15,6 +16,12 @@ export class Home {
   // Repeat the list twice for smooth infinite scroll illusion
   get repeatedSkills(): Skill[] {
     return [...this.skills, ...this.skills];
+  }
+
+  testimonials: Testimonial[] = TESTIMONIALS;
+
+  get repeatedTestimonials(): Testimonial[] {
+    return [...this.testimonials, ...this.testimonials];
   }
 
 }

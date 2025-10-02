@@ -1,6 +1,6 @@
 <section class="landing-section">
   <div class="face left">
-    <img src="./face-left.png" alt="Left Half Face">
+    <img src="./face-left.png" alt="Left Half Face" />
   </div>
 
   <div class="intro-text">
@@ -8,8 +8,8 @@
     <h1 class="name-intro">I'm Tanush Purwar</h1>
     <p class="subtitle">AKA Sanskari Wolf</p>
     <p class="description">
-      A passionate developer crafting secure systems, building innovative solutions,
-      and shaping the digital future one line of code at a time.
+      A passionate developer crafting secure systems, building innovative solutions, and shaping the
+      digital future one line of code at a time.
     </p>
 
     <div class="cta-buttons">
@@ -24,96 +24,155 @@
   </div>
 
   <div class="face right">
-    <img src="./face-right.png" alt="Right Half Face">
+    <img src="./face-right.png" alt="Right Half Face" />
   </div>
 </section>
 <section class="skills-section">
-        <h2 class="skills-heading">Skills That I Own</h2>
+  <h2 class="skills-heading">Skills That I Own</h2>
 
-        <div class="carousel-wrapper">
-            <div class="carousel-track">
-                <!-- First set of skills -->
-                <div class="skill-card">
-                    <div class="skill-logo">⚛️</div>
-                    <h3 class="skill-name">React</h3>
-                    <p class="skill-quote">"Building interactive UIs with component-based architecture"</p>
+  <div class="carousel-wrapper">
+    <div class="carousel-track">
+      <!-- First set of skills -->
+      <div class="skill-card">
+        <div class="skill-logo">⚛️</div>
+        <h3 class="skill-name">React</h3>
+        <p class="skill-quote">"Building interactive UIs with component-based architecture"</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-logo">🔷</div>
+        <h3 class="skill-name">Angular</h3>
+        <p class="skill-quote">"Creating robust enterprise applications"</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-logo">🟢</div>
+        <h3 class="skill-name">Node.js</h3>
+        <p class="skill-quote">"Server-side JavaScript for scalable applications"</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-logo">🐍</div>
+        <h3 class="skill-name">Python</h3>
+        <p class="skill-quote">"Versatile language for automation and AI"</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-logo">🛡️</div>
+        <h3 class="skill-name">Cybersecurity</h3>
+        <p class="skill-quote">"Protecting digital assets and infrastructure"</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-logo">☁️</div>
+        <h3 class="skill-name">AWS</h3>
+        <p class="skill-quote">"Cloud computing and infrastructure management"</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-logo">🐳</div>
+        <h3 class="skill-name">Docker</h3>
+        <p class="skill-quote">"Containerizing applications for consistency"</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-logo">🎨</div>
+        <h3 class="skill-name">UI/UX</h3>
+        <p class="skill-quote">"Designing intuitive user experiences"</p>
+      </div>
+      <!-- Duplicate set for seamless loop -->
+      <div class="skill-card">
+        <div class="skill-logo">⚛️</div>
+        <h3 class="skill-name">React</h3>
+        <p class="skill-quote">"Building interactive UIs with component-based architecture"</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-logo">🔷</div>
+        <h3 class="skill-name">Angular</h3>
+        <p class="skill-quote">"Creating robust enterprise applications"</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-logo">🟢</div>
+        <h3 class="skill-name">Node.js</h3>
+        <p class="skill-quote">"Server-side JavaScript for scalable applications"</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-logo">🐍</div>
+        <h3 class="skill-name">Python</h3>
+        <p class="skill-quote">"Versatile language for automation and AI"</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-logo">🛡️</div>
+        <h3 class="skill-name">Cybersecurity</h3>
+        <p class="skill-quote">"Protecting digital assets and infrastructure"</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-logo">☁️</div>
+        <h3 class="skill-name">AWS</h3>
+        <p class="skill-quote">"Cloud computing and infrastructure management"</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-logo">🐳</div>
+        <h3 class="skill-name">Docker</h3>
+        <p class="skill-logo">"Containerizing applications for consistency"</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-logo">🎨</div>
+        <h3 class="skill-name">UI/UX</h3>
+        <p class="skill-quote">"Designing intuitive user experiences"</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="testimonials-section">
+  <div class="testimonials-container">
+    <div class="testimonials-header">
+      <h3 class="testimonials-subtitle">Words That Matter</h3>
+    </div>
+    <div class="carousel-container">
+      <!-- Top Carousel -->
+      <div class="carousel" style="mask-image:linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 95%)">
+        <div class="carousel-track animate-scroll-reverse">
+          <div class="testimonial-card" *ngFor="let testimonial of repeatedTestimonials">
+            <p class="testimonial-quote">"{{ testimonial.quote }}"</p>
+            <div class="testimonial-footer">
+              <div class="author-info">
+                <img class="author-avatar" [src]="testimonial.avatar" alt="avatar">
+                <div class="author-details">
+                  <h5 class="author-name">{{ testimonial.name }}</h5>
+                  <p class="author-title">{{ testimonial.title }}</p>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-logo">🔷</div>
-                    <h3 class="skill-name">Angular</h3>
-                    <p class="skill-quote">"Creating robust enterprise applications"</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">🟢</div>
-                    <h3 class="skill-name">Node.js</h3>
-                    <p class="skill-quote">"Server-side JavaScript for scalable applications"</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">🐍</div>
-                    <h3 class="skill-name">Python</h3>
-                    <p class="skill-quote">"Versatile language for automation and AI"</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">🛡️</div>
-                    <h3 class="skill-name">Cybersecurity</h3>
-                    <p class="skill-quote">"Protecting digital assets and infrastructure"</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">☁️</div>
-                    <h3 class="skill-name">AWS</h3>
-                    <p class="skill-quote">"Cloud computing and infrastructure management"</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">🐳</div>
-                    <h3 class="skill-name">Docker</h3>
-                    <p class="skill-quote">"Containerizing applications for consistency"</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">🎨</div>
-                    <h3 class="skill-name">UI/UX</h3>
-                    <p class="skill-quote">"Designing intuitive user experiences"</p>
-                </div>
-                <!-- Duplicate set for seamless loop -->
-                <div class="skill-card">
-                    <div class="skill-logo">⚛️</div>
-                    <h3 class="skill-name">React</h3>
-                    <p class="skill-quote">"Building interactive UIs with component-based architecture"</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">🔷</div>
-                    <h3 class="skill-name">Angular</h3>
-                    <p class="skill-quote">"Creating robust enterprise applications"</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">🟢</div>
-                    <h3 class="skill-name">Node.js</h3>
-                    <p class="skill-quote">"Server-side JavaScript for scalable applications"</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">🐍</div>
-                    <h3 class="skill-name">Python</h3>
-                    <p class="skill-quote">"Versatile language for automation and AI"</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">🛡️</div>
-                    <h3 class="skill-name">Cybersecurity</h3>
-                    <p class="skill-quote">"Protecting digital assets and infrastructure"</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">☁️</div>
-                    <h3 class="skill-name">AWS</h3>
-                    <p class="skill-quote">"Cloud computing and infrastructure management"</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">🐳</div>
-                    <h3 class="skill-name">Docker</h3>
-                    <p class="skill-logo">"Containerizing applications for consistency"</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">🎨</div>
-                    <h3 class="skill-name">UI/UX</h3>
-                    <p class="skill-quote">"Designing intuitive user experiences"</p>
-                </div>
+              </div>
+              <div class="divider"></div>
+              <div class="social-link">
+                <a [href]="testimonial.link" target="_blank">
+                  <svg width="30" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path>
+                  </svg>
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+      <!-- Bottom Carousel -->
+      <div class="carousel" style="mask-image:linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 95%)">
+        <div class="carousel-track animate-scroll">
+          <div class="testimonial-card" *ngFor="let testimonial of repeatedTestimonials">
+            <p class="testimonial-quote">"{{ testimonial.quote }}"</p>
+            <div class="testimonial-footer">
+              <div class="author-info">
+                <img class="author-avatar" [src]="testimonial.avatar" alt="avatar">
+                <div class="author-details">
+                  <h5 class="author-name">{{ testimonial.name }}</h5>
+                  <p class="author-title">{{ testimonial.title }}</p>
+                </div>
+              </div>
+              <div class="divider"></div>
+              <div class="social-link">
+                <a [href]="testimonial.link" target="_blank">
+                  <svg width="30" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

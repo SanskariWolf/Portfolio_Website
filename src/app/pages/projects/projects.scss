@@ -1,23 +1,20 @@
 // Color Variables
 $bg-color: #f5f5dc;
-$primary-orange: #ff6b35;
-$secondary-orange: #fb986a;
-$light-orange: #f7c59f;
-$lightest-orange: #f6ddbe;
-$mint-green: #c8d6cd;
-$light-blue: #9ab7bd;
-$medium-blue: #7ba2b3;
-$dark-blue: #1a659e;
-$darkest-blue: #004e89;
-$black: #010b13;
+$text-color: #333;
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$accent-color: #e74c3c;
+$white: #ffffff;
+$light-gray: #ecf0f1;
+$dark-gray: #7f8c8d;
 
 .projects-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 4rem 2rem;
 
   @media (max-width: 768px) {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
 }
 
@@ -25,12 +22,11 @@ $black: #010b13;
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-bottom: 2.5rem;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  margin-bottom: 3rem;
+  padding: 1rem;
+  background: $white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -39,23 +35,7 @@ $black: #010b13;
 }
 
 .filter-icon {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, $primary-orange, $secondary-orange);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba($primary-orange, 0.3);
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba($primary-orange, 0.4);
-  }
+  display: none; // Hidden for a cleaner look, can be re-enabled if needed
 }
 
 .filter-options {
@@ -74,19 +54,17 @@ $black: #010b13;
   position: relative;
 
   .dropdown-button {
-    background: linear-gradient(135deg, $light-blue, $medium-blue);
-    color: white;
+    background: $primary-color;
+    color: $white;
     border: none;
     padding: 0.8rem 1.5rem;
     border-radius: 25px;
     cursor: pointer;
     font-size: 0.9rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba($light-blue, 0.3);
+    transition: background-color 0.3s ease;
 
     &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba($light-blue, 0.4);
+      background: darken($primary-color, 10%);
     }
   }
 
@@ -94,9 +72,9 @@ $black: #010b13;
     position: absolute;
     top: 100%;
     left: 0;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: $white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 200px;
     z-index: 1000;
     opacity: 0;
@@ -114,21 +92,9 @@ $black: #010b13;
       padding: 0.8rem 1.2rem;
       cursor: pointer;
       transition: background-color 0.2s ease;
-      border-bottom: 1px solid #f0f0f0;
 
       &:hover {
-        background-color: #f8f9fa;
-      }
-
-      &:first-child {
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-      }
-
-      &:last-child {
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        border-bottom: none;
+        background-color: $light-gray;
       }
     }
   }
@@ -141,19 +107,17 @@ $black: #010b13;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border: 1px solid $light-gray;
 
   &.active {
-    background: linear-gradient(135deg, $primary-orange, $secondary-orange);
-    color: white;
-    box-shadow: 0 4px 15px rgba($primary-orange, 0.3);
-    transform: translateY(-2px);
+    background: $primary-color;
+    color: $white;
+    border-color: $primary-color;
   }
 
   &.inactive {
-    background: #e9ecef;
-    color: #6c757d;
-    border: 2px solid #dee2e6;
+    background: $white;
+    color: $dark-gray;
   }
 
   &:hover {
@@ -178,53 +142,52 @@ $black: #010b13;
 }
 
 .project-card {
-  background: white;
-  border-radius: 20px;
+  background: $white;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
   opacity: 1;
   transform: scale(1);
 
   &:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   }
 
   &.hidden {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.95);
     pointer-events: none;
   }
 
   .project-image {
     width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, $mint-green, $light-blue);
+    background: $light-gray;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: $dark-gray;
     font-size: 1.1rem;
     font-weight: 500;
   }
 
   .project-content {
-    padding: 1.8rem;
+    padding: 1.5rem;
 
     .project-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: $darkest-blue;
-      margin-bottom: 1rem;
-      line-height: 1.3;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: $secondary-color;
+      margin-bottom: 0.75rem;
     }
 
     .project-description {
-      color: #555;
+      color: $text-color;
       line-height: 1.6;
-      margin-bottom: 1.5rem;
-      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.9rem;
     }
 
     .project-tags {
@@ -233,14 +196,12 @@ $black: #010b13;
       gap: 0.5rem;
 
       .project-tag {
-        background: linear-gradient(135deg, $light-orange, $lightest-orange);
-        color: $darkest-blue;
+        background: $light-gray;
+        color: $secondary-color;
         padding: 0.4rem 0.8rem;
         border-radius: 15px;
         font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
+        font-weight: 500;
       }
     }
   }
@@ -250,7 +211,7 @@ $black: #010b13;
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -259,5 +220,5 @@ $black: #010b13;
 }
 
 .fade-in {
-  animation: fadeIn 0.5s ease-in;
+  animation: fadeIn 0.5s ease-in-out;
 }

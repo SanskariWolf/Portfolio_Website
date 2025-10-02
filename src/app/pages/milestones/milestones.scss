@@ -1,15 +1,15 @@
 // Color Variables
-$bg-color: #f5f5dc;
-$primary-orange: #ff6b35;
-$secondary-orange: #fb986a;
-$light-orange: #f7c59f;
-$lightest-orange: #f6ddbe;
-$mint-green: #c8d6cd;
-$light-blue: #9ab7bd;
-$medium-blue: #7ba2b3;
-$dark-blue: #1a659e;
-$darkest-blue: #004e89;
-$black: #010b13;
+$bg-color: #f8f9fa;
+$text-color: #343a40;
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$white: #ffffff;
+$light-gray: #e9ecef;
+$border-color: #dee2e6;
+$success-color: #28a745;
+$gold-color: #ffc107;
+$silver-color: #c0c0c0;
+$bronze-color: #cd7f32;
 
 .milestones-container {
   display: flex;
@@ -27,12 +27,11 @@ $black: #010b13;
 
 // Side Panel Styles
 .side-panel {
-  width: 280px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-  border-radius: 20px;
+  width: 250px;
+  background: $white;
+  border-radius: 10px;
   padding: 2rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   height: fit-content;
   position: sticky;
   top: 2rem;
@@ -44,15 +43,11 @@ $black: #010b13;
   }
 
   .panel-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: $darkest-blue;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $text-color;
     margin-bottom: 2rem;
     text-align: center;
-    background: linear-gradient(135deg, $darkest-blue, $dark-blue);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
   }
 
   .panel-options {
@@ -70,48 +65,29 @@ $black: #010b13;
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1.2rem;
-    border-radius: 15px;
+    padding: 1rem;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.3);
-    border: 2px solid transparent;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-      gap: 0.5rem;
-      padding: 1rem;
-      text-align: center;
-      flex: 1;
-    }
+    border: 1px solid transparent;
 
     &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      background: $light-gray;
     }
 
     &.active {
-      background: linear-gradient(135deg, $primary-orange, $secondary-orange);
-      color: white;
-      box-shadow: 0 8px 25px rgba($primary-orange, 0.4);
-      transform: translateY(-2px);
+      background: $primary-color;
+      color: $white;
+      box-shadow: 0 4px 10px rgba($primary-color, 0.3);
     }
 
     .panel-icon {
-      font-size: 1.5rem;
-
-      @media (max-width: 768px) {
-        font-size: 1.2rem;
-      }
+      font-size: 1.2rem;
     }
 
     .panel-label {
-      font-weight: 600;
+      font-weight: 500;
       font-size: 1rem;
-
-      @media (max-width: 768px) {
-        font-size: 0.85rem;
-      }
     }
   }
 }
@@ -127,12 +103,11 @@ $black: #010b13;
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-bottom: 2.5rem;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: $white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -141,42 +116,24 @@ $black: #010b13;
 }
 
 .filter-icon {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, $primary-orange, $secondary-orange);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba($primary-orange, 0.3);
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba($primary-orange, 0.4);
-  }
+  display: none;
 }
 
 .filter-dropdown {
   position: relative;
 
   .dropdown-button {
-    background: linear-gradient(135deg, $light-blue, $medium-blue);
-    color: white;
-    border: none;
+    background: $white;
+    color: $text-color;
+    border: 1px solid $border-color;
     padding: 0.8rem 1.5rem;
     border-radius: 25px;
     cursor: pointer;
     font-size: 0.9rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba($light-blue, 0.3);
 
     &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba($light-blue, 0.4);
+      background: $light-gray;
     }
   }
 
@@ -184,9 +141,9 @@ $black: #010b13;
     position: absolute;
     top: 100%;
     left: 0;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: $white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 200px;
     z-index: 1000;
     opacity: 0;
@@ -204,21 +161,9 @@ $black: #010b13;
       padding: 0.8rem 1.2rem;
       cursor: pointer;
       transition: background-color 0.2s ease;
-      border-bottom: 1px solid #f0f0f0;
 
       &:hover {
-        background-color: #f8f9fa;
-      }
-
-      &:first-child {
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-      }
-
-      &:last-child {
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        border-bottom: none;
+        background-color: $light-gray;
       }
     }
   }
@@ -243,19 +188,17 @@ $black: #010b13;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border: 1px solid $border-color;
 
   &.active {
-    background: linear-gradient(135deg, $primary-orange, $secondary-orange);
-    color: white;
-    box-shadow: 0 4px 15px rgba($primary-orange, 0.3);
-    transform: translateY(-2px);
+    background: $primary-color;
+    color: $white;
+    border-color: $primary-color;
   }
 
   &.inactive {
-    background: #e9ecef;
-    color: #6c757d;
-    border: 2px solid #dee2e6;
+    background: $white;
+    color: $secondary-color;
   }
 
   &:hover {
@@ -274,60 +217,50 @@ $black: #010b13;
 
   &.certifications-grid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
   }
 
   &.badges-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
-    @media (max-width: 768px) {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
   }
 }
 
+// Card Hidden State
+.hidden {
+  opacity: 0 !important;
+  transform: scale(0.8) !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  overflow: hidden !important;
+}
+
+
 // Achievement Card Styles
 .achievement-card {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: $white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
   display: flex;
   gap: 2rem;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 0;
-  }
-
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  }
-
-  &.hidden {
-    opacity: 0;
-    transform: scale(0.8);
-    pointer-events: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   }
 
   .achievement-image {
-    width: 300px;
-    height: 200px;
+    width: 250px;
     flex-shrink: 0;
-
-    @media (max-width: 768px) {
-      width: 100%;
-    }
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
     }
   }
 
@@ -335,23 +268,18 @@ $black: #010b13;
     padding: 2rem;
     flex: 1;
 
-    @media (max-width: 768px) {
-      padding: 1.5rem;
-    }
-
     .competition-info {
       margin-bottom: 1.5rem;
-      position: relative;
 
       .competition-name {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: $darkest-blue;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: $text-color;
         margin-bottom: 0.5rem;
       }
 
       .organizer {
-        color: #666;
+        color: $secondary-color;
         font-size: 1rem;
         margin-bottom: 1rem;
       }
@@ -362,26 +290,25 @@ $black: #010b13;
         border-radius: 20px;
         font-weight: 600;
         font-size: 0.9rem;
-        text-transform: uppercase;
 
         &.position-1st {
-          background: linear-gradient(135deg, #ffd700, #ffed4e);
-          color: #b8860b;
+          background: $gold-color;
+          color: $white;
         }
 
         &.position-2nd {
-          background: linear-gradient(135deg, #c0c0c0, #e5e5e5);
-          color: #666;
+          background: $silver-color;
+          color: $white;
         }
 
         &.position-3rd {
-          background: linear-gradient(135deg, #cd7f32, #daa520);
-          color: #8b4513;
+          background: $bronze-color;
+          color: $white;
         }
 
         &.position-winner {
-          background: linear-gradient(135deg, $primary-orange, $secondary-orange);
-          color: white;
+          background: $success-color;
+          color: $white;
         }
       }
     }
@@ -392,7 +319,7 @@ $black: #010b13;
       .team-name {
         font-size: 1.1rem;
         font-weight: 600;
-        color: $dark-blue;
+        color: $text-color;
         margin-bottom: 0.5rem;
       }
 
@@ -402,8 +329,8 @@ $black: #010b13;
         gap: 0.5rem;
 
         .team-member {
-          background: rgba($mint-green, 0.3);
-          color: $darkest-blue;
+          background: $light-gray;
+          color: $secondary-color;
           padding: 0.3rem 0.8rem;
           border-radius: 12px;
           font-size: 0.85rem;
@@ -418,19 +345,17 @@ $black: #010b13;
       margin-bottom: 1rem;
 
       .achievement-tag {
-        background: linear-gradient(135deg, $light-orange, $lightest-orange);
-        color: $darkest-blue;
+        background: $light-gray;
+        color: $secondary-color;
         padding: 0.4rem 0.8rem;
         border-radius: 15px;
         font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
+        font-weight: 500;
       }
     }
 
     .achievement-description {
-      color: #555;
+      color: $text-color;
       line-height: 1.6;
       font-size: 0.95rem;
     }
@@ -439,21 +364,14 @@ $black: #010b13;
 
 // Certification Card Styles
 .certification-card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  background: $white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-  }
-
-  &.hidden {
-    opacity: 0;
-    transform: scale(0.8);
-    pointer-events: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   }
 
   .certification-image {
@@ -464,6 +382,8 @@ $black: #010b13;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
     }
   }
 
@@ -473,13 +393,12 @@ $black: #010b13;
     .certification-name {
       font-size: 1.1rem;
       font-weight: 600;
-      color: $darkest-blue;
+      color: $text-color;
       margin-bottom: 0.5rem;
-      line-height: 1.3;
     }
 
     .issuing-org {
-      color: #666;
+      color: $secondary-color;
       font-size: 0.9rem;
       margin-bottom: 1rem;
     }
@@ -487,21 +406,12 @@ $black: #010b13;
     .certification-dates {
       margin-bottom: 1rem;
       font-size: 0.85rem;
-
-      .issue-date, .expiry-date, .lifetime-validity {
-        margin-bottom: 0.3rem;
-        color: #555;
-      }
-
-      .lifetime-validity {
-        color: $primary-orange;
-        font-weight: 600;
-      }
+      color: $secondary-color;
     }
 
     .certificate-id {
       font-size: 0.8rem;
-      color: #666;
+      color: $secondary-color;
       word-break: break-all;
     }
   }
@@ -509,22 +419,16 @@ $black: #010b13;
 
 // Badge Card Styles
 .badge-card {
-  background: white;
-  border-radius: 15px;
+  background: $white;
+  border-radius: 10px;
   padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-  }
-
-  &.hidden {
-    opacity: 0;
-    transform: scale(0.8);
-    pointer-events: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   }
 
   .badge-image {
@@ -543,8 +447,7 @@ $black: #010b13;
     .badge-name {
       font-size: 0.9rem;
       font-weight: 600;
-      color: $darkest-blue;
-      line-height: 1.3;
+      color: $text-color;
     }
   }
 }
