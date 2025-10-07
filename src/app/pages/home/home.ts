@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { SKILLS, Skill } from '../../data/skills';
 import { CommonModule } from '@angular/common';
-import { TESTIMONIALS, Testimonial } from './assets/testimonials';
+import { TESTIMONIALS, Testimonial, SKILLS, Skill } from './assets/testimonials';
 
 
 @Component({

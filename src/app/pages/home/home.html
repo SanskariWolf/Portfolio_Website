@@ -28,93 +28,70 @@
   </div>
 </section>
 <section class="skills-section">
-  <h2 class="skills-heading">Skills That I Own</h2>
+  <div class="top-border">
+    <div class="left-decoration">
+      .        へ   ♡    ︵<br />
+     ૮  -   ՛ )   ૮(`ᴥ ⁻ 𑁬<br />
+       /   ⁻  ៸|      |    ⸝ 〵<br />
+ 乀 (ˍ, ل ل     じしˍ,  )୭
+    </div>
+    <div class="dashed-line"></div>
+    <div class="right-decoration">
+      ⋆˚₊ 𖤓☽⋆˚₊ 𖤓˚.⋆<br />
+      ⋆    ႔ ႔<br />
+         ᠸ^ ^ ⸝⸝<br />
+           |、˜〵<br />
+          じしˍ,)⁐̤ᐷ
+    </div>
+  </div>
+  <h2 class="skills-heading">Talents that I Own</h2>
 
   <div class="carousel-wrapper">
     <div class="carousel-track">
-      <!-- First set of skills -->
-      <div class="skill-card">
-        <div class="skill-logo">⚛️</div>
-        <h3 class="skill-name">React</h3>
-        <p class="skill-quote">"Building interactive UIs with component-based architecture"</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-logo">🔷</div>
-        <h3 class="skill-name">Angular</h3>
-        <p class="skill-quote">"Creating robust enterprise applications"</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-logo">🟢</div>
-        <h3 class="skill-name">Node.js</h3>
-        <p class="skill-quote">"Server-side JavaScript for scalable applications"</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-logo">🐍</div>
-        <h3 class="skill-name">Python</h3>
-        <p class="skill-quote">"Versatile language for automation and AI"</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-logo">🛡️</div>
-        <h3 class="skill-name">Cybersecurity</h3>
-        <p class="skill-quote">"Protecting digital assets and infrastructure"</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-logo">☁️</div>
-        <h3 class="skill-name">AWS</h3>
-        <p class="skill-quote">"Cloud computing and infrastructure management"</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-logo">🐳</div>
-        <h3 class="skill-name">Docker</h3>
-        <p class="skill-quote">"Containerizing applications for consistency"</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-logo">🎨</div>
-        <h3 class="skill-name">UI/UX</h3>
-        <p class="skill-quote">"Designing intuitive user experiences"</p>
-      </div>
-      <!-- Duplicate set for seamless loop -->
-      <div class="skill-card">
-        <div class="skill-logo">⚛️</div>
-        <h3 class="skill-name">React</h3>
-        <p class="skill-quote">"Building interactive UIs with component-based architecture"</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-logo">🔷</div>
-        <h3 class="skill-name">Angular</h3>
-        <p class="skill-quote">"Creating robust enterprise applications"</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-logo">🟢</div>
-        <h3 class="skill-name">Node.js</h3>
-        <p class="skill-quote">"Server-side JavaScript for scalable applications"</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-logo">🐍</div>
-        <h3 class="skill-name">Python</h3>
-        <p class="skill-quote">"Versatile language for automation and AI"</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-logo">🛡️</div>
-        <h3 class="skill-name">Cybersecurity</h3>
-        <p class="skill-quote">"Protecting digital assets and infrastructure"</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-logo">☁️</div>
-        <h3 class="skill-name">AWS</h3>
-        <p class="skill-quote">"Cloud computing and infrastructure management"</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-logo">🐳</div>
-        <h3 class="skill-name">Docker</h3>
-        <p class="skill-logo">"Containerizing applications for consistency"</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-logo">🎨</div>
-        <h3 class="skill-name">UI/UX</h3>
-        <p class="skill-quote">"Designing intuitive user experiences"</p>
+      <!-- Skills Loop -->
+      <div class="parent" *ngFor="let skill of repeatedSkills">
+        <div class="card">
+          <div class="content-box">
+            <span class="card-title">{{ skill.name }}</span>
+            <p class="card-content">
+              {{ skill.quote }}
+            </p>
+          </div>
+          <div class="date-box">
+            <span class="skill-logo-in-card">{{ skill.logo }}</span>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+  <div class="bottom-right-art">
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠻⣥⠙⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡿⠀⡿⠻⣆⠙⠦⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⡄⠁⠀⠘⣆⡔⢶⣆⠉⢷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡄⠀⠀⡿⢿⡀⠉⠀⠞⠹⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡿⡄⠀⡇⠘⣧⣀⣀⣀⠀⠻⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠃⠁⢀⣠⠞⣹⢿⠻⡟⢿⣿⣯⢳⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⠃⠶⠒⠉⠁⣴⠇⢸⡇⡟⡷⢬⡙⠎⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⠇⢀⣠⣄⡀⠚⠁⠀⠈⠀⠀⣷⠀⠉⠛⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⣽⣿⣶⠋⢉⡿⠇⠀⠀⠀⠀⠀⣰⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢱⣿⣿⠇⠀⣠⣥⣤⡀⠀⠀⠀⢀⡟⣿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⢿⣿⢀⣾⡟⠉⢹⡇⠀⠀⠀⢸⠁⡿⠙⣿⣷⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⢸⣇⣾⡟⠀⠸⡏⣄⡀⠀⠀⢹⢀⡇⢀⢘⢿⣮⡙⠀⠀⠀⠀⠀⠀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣇⠀⡀⣧⠰⣿⣶⣄⠀⠀⠀⠘⣎⠳⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡿⣿⣆⠹⣿⡐⣾⣷⣹⣆⠀⠀⠀⠘⢷⣄⣻⣿⣿⣷⡄⠀⠀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⢿⣿⣦⠽⣇⣹⣟⢿⠙⠁⠀⠀⠀⣤⠉⠻⣿⣿⣿⣿⣦⡀⠀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠙⡟⠂⣿⢹⡿⣼⠇⠀⠀⣀⠀⣷⡀⠀⠈⠻⣿⣿⣿⣷⡀⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡆⢻⠀⠉⢸⡇⠈⣀⣠⣾⠇⠀⠻⣿⣦⣤⣴⣿⠿⣿⡿⣷⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡇⢸⡀⠀⢸⠁⣰⠛⣽⡧⠖⠻⢿⡆⠈⠉⠉⠀⠀⢻⣷⠹⠇<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠘⡇⠀⢸⢰⡏⢰⡟⠀⣀⣀⡼⠃⠀⢀⡆⠀⠀⠘⣿⡆⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⣴⣿⣶⣷⣶⣾⣿⣧⣾⣤⣄⣀⣀⣤⣤⣶⡿⠀⠀⠀⢠⣿⡇⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠀⣠⣴⣾⣿⣟⡛⠛⠛⠉⠉⠉⠉⢉⣭⣽⡿⠿⠿⠿⠛⠛⠛⠓⠲⠦⠄⣼⢻⡇⠀<br>
+    ⠀⠀⠀⠀⠀⠀⠘⢉⣼⣿⣿⠿⠛⠛⠁⠀⠀⣠⠖⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠁⣸⡇⠀<br>
+    ⠀⠀⠀⠀⠀⢀⣴⠿⠛⠁⢀⣀⣀⣀⣀⣀⣄⡀⠀⠀⠀⢦⣀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠇⣰⣿⠁⠀<br>
+    ⠀⠀⠀⢀⣴⣟⣥⣶⣾⣿⣿⣿⣿⣿⣿⣭⣤⣤⣤⣀⣀⡀⠈⠛⠶⢶⣶⣶⣾⣿⣿⣿⠟⠁⠀⠀<br>
+    ⠀⢀⣴⡿⠟⠋⡽⠟⠉⠉⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠙⠛⠛⠛⠿⠿⠿⠿⠟⠛⠉⠁⠀⠀⠀⠀<br>
+    ⠐⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
   </div>
 </section>
 <section class="testimonials-section">

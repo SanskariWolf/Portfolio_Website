@@ -57,3 +57,52 @@ export const TESTIMONIALS: Testimonial[] = [
     link: "#"
   }
 ];
+
+export interface Skill {
+  logo: string;
+  name: string;
+  quote: string;
+}
+
+export const SKILLS: Skill[] = [
+  {
+    logo: "⚛️",
+    name: "React",
+    quote: "Building interactive UIs with component-based architecture"
+  },
+  {
+    logo: "🔷",
+    name: "Angular",
+    quote: "Creating robust enterprise applications"
+  },
+  {
+    logo: "🟢",
+    name: "Node.js",
+    quote: "Server-side JavaScript for scalable applications"
+  },
+  {
+    logo: "🐍",
+    name: "Python",
+    quote: "Versatile language for automation and AI"
+  },
+  {
+    logo: "🛡️",
+    name: "Cybersecurity",
+    quote: "Protecting digital assets and infrastructure"
+  },
+  {
+    logo: "☁️",
+    name: "AWS",
+    quote: "Cloud computing and infrastructure management"
+  },
+  {
+    logo: "🐳",
+    name: "Docker",
+    quote: "Containerizing applications for consistency"
+  },
+  {
+    logo: "🎨",
+    name: "UI/UX",
+    quote: "Designing intuitive user experiences"
+  }
+];
