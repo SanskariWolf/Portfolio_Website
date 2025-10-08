@@ -7,13 +7,13 @@ export interface Project {
   description: string;
   tags: string[];
   image: string;
+  link: string; // New property for the redirect link
 }
 
 export interface FilterOption {
   key: string;
   label: string;
 }
-
 
 @Component({
   selector: 'app-projects',
@@ -40,58 +40,68 @@ export class Projects {
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce solution with modern UI/UX design, secure payment integration, and robust backend infrastructure.",
       tags: ["webdev", "database", "uiux"],
-      image: "E-Commerce Platform"
+      image: "https://picsum.photos/seed/ecommerce/400/300",
+      link: "#" // Replace with your project link
     },
     {
       id: 2,
       title: "Crypto Trading Bot",
       description: "Automated cryptocurrency trading bot with machine learning algorithms for market analysis and risk management.",
       tags: ["blockchain", "database"],
-      image: "Crypto Trading Bot"
+      image: "https://picsum.photos/seed/crypto/400/300",
+      link: "#" // Replace with your project link
     },
     {
       id: 3,
       title: "Security Audit Tool",
       description: "Comprehensive cybersecurity tool for vulnerability assessment and penetration testing of web applications.",
       tags: ["cybersecurity", "webdev"],
-      image: "Security Audit Tool"
+      image: "https://picsum.photos/seed/security/400/300",
+      link: "#" // Replace with your project link
     },
     {
       id: 4,
       title: "Container Orchestration",
       description: "Scalable microservices architecture deployed using Docker containers and Kubernetes orchestration.",
       tags: ["docker", "database", "webdev"],
-      image: "Container Orchestration"
+      image: "https://picsum.photos/seed/docker/400/300",
+      link: "#" // Replace with your project link
     },
     {
       id: 5,
       title: "DeFi Smart Contract",
       description: "Decentralized finance protocol with yield farming capabilities and automated market maker functionality.",
       tags: ["blockchain", "cybersecurity"],
-      image: "DeFi Smart Contract"
+      image: "https://picsum.photos/seed/defi/400/300",
+      link: "#" // Replace with your project link
     },
     {
       id: 6,
       title: "Design System Library",
       description: "Comprehensive UI component library with design tokens, accessibility features, and documentation.",
       tags: ["uiux", "webdev"],
-      image: "Design System Library"
+      image: "https://picsum.photos/seed/design/400/300",
+      link: "#" // Replace with your project link
     },
     {
       id: 7,
       title: "Database Migration Tool",
       description: "Advanced database migration and synchronization tool supporting multiple database engines with rollback capabilities.",
       tags: ["database", "docker"],
-      image: "Database Migration Tool"
+      image: "https://picsum.photos/seed/database/400/300",
+      link: "#" // Replace with your project link
     },
     {
       id: 8,
       title: "Penetration Testing Framework",
       description: "Automated penetration testing framework with custom vulnerability scanners and reporting dashboard.",
       tags: ["cybersecurity"],
-      image: "Penetration Testing Framework"
+      image: "https://picsum.photos/seed/pentest/400/300",
+      link: "#" // Replace with your project link
     }
   ];
+
+  filteredProjects: Project[] = [];
 
   private tagLabels: { [key: string]: string } = {
     'webdev': 'Web Dev',
@@ -101,6 +111,20 @@ export class Projects {
     'cybersecurity': 'Security',
     'uiux': 'UI/UX'
   };
+
+  constructor() {
+    this.updateFilteredProjects();
+  }
+
+  updateFilteredProjects(): void {
+    if (this.activeFilters.size === 0) {
+      this.filteredProjects = [];
+      return;
+    }
+    this.filteredProjects = this.projects.filter(project =>
+      project.tags.some(tag => this.activeFilters.has(tag))
+    );
+  }
 
   toggleDropdown(): void {
     this.isDropdownOpen = !this.isDropdownOpen;
@@ -112,32 +136,26 @@ export class Projects {
     } else {
       this.activeFilters.add(filter);
     }
-    // Close dropdown after filter selection
     this.isDropdownOpen = false;
+    this.updateFilteredProjects();
   }
 
   selectAll(): void {
-    this.activeFilters = new Set(['webdev', 'blockchain', 'database', 'docker', 'cybersecurity', 'uiux']);
+    this.filterOptions.forEach(option => this.activeFilters.add(option.key));
     this.isDropdownOpen = false;
+    this.updateFilteredProjects();
   }
 
   deselectAll(): void {
     this.activeFilters.clear();
     this.isDropdownOpen = false;
-  }
-
-  shouldShowProject(project: Project): boolean {
-    if (this.activeFilters.size === 0) {
-      return false; // Hide all projects if no filters are active
-    }
-    return project.tags.some(tag => this.activeFilters.has(tag));
+    this.updateFilteredProjects();
   }
 
   getTagLabel(tag: string): string {
     return this.tagLabels[tag] || tag;
   }
 
-  // Close dropdown when clicking outside
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent): void {
     const target = event.target as HTMLElement;
@@ -148,5 +166,4 @@ export class Projects {
       this.isDropdownOpen = false;
     }
   }
-
 }

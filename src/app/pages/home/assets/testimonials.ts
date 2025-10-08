@@ -8,18 +8,18 @@ export interface Testimonial {
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    quote: "Working with Tanush was a game-changer! His skills brought our UI to life with a clean, modern, and fully responsive design.",
-    avatar: "https://images.unsplash.com/photo-1665686307516-1915b9616526?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw4fHxmZW1hbGV8ZW58MHwwfHx8MTc0MzU5Njc5OXww&ixlib=rb-4.0.3&q=80&w=1080",
-    name: "Sarah M",
-    title: "Startup Founder",
-    link: "#"
+    quote: "Working with Tanush has been a pleasure. His enthusiasm, eagerness to learn, and strong collaborative spirit make him an invaluable team member.",
+    avatar: "https://media.licdn.com/dms/image/v2/D5603AQHboIyv1iKpIQ/profile-displayphoto-shrink_200_200/B56ZTAAKoYGsAY-/0/1738388059741?e=1762992000&v=beta&t=JCql1wrNmkUUkWnNkSMK3-aSiiRPA_0BAXVw55wELdg",
+    name: "Pratham Gupta",
+    title: "AI Engineer",
+    link: "https://www.linkedin.com/in/prathamgupta006/"
   },
   {
-    quote: "Finding a great developer is tough, but Tanush exceeded all my expectations. His code is clean, efficient, and highly scalable.",
-    avatar: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwzfHxwZXJzb258ZW58MHwwfHx8MTc0MzMyNzEzNHww&ixlib=rb-4.0.3&q=80&w=1080",
-    name: "Daniel S",
-    title: "Business Owner",
-    link: "#"
+    quote: "Knowledgeable person, I found him helpful in the cybersec domain.",
+    avatar: "https://media.licdn.com/dms/image/v2/D5635AQGHnTZpMpUTkg/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1716036641680?e=1760522400&v=beta&t=iJGMX7eFnMFmrPDWgoUrkSybs_rUZzAhiIEyO31sF5o",
+    name: "Chayan Khetan",
+    title: "Chayan",
+    link: "https://www.linkedin.com/in/chayan-khetan-1b9b71222/"
   },
   {
     quote: "A rare talent who excels in multiple technologies! He built a full-stack web app that is both powerful and beautiful.",

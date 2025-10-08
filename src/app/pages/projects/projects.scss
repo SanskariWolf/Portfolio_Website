@@ -1,13 +1,14 @@
 // Color Variables
 $bg-color: #f5f5dc;
 $text-color: #333;
-$primary-color: #3498db;
+$primary-black: #2c3e50;
 $secondary-color: #2c3e50;
 $accent-color: #e74c3c;
 $white: #ffffff;
 $light-gray: #ecf0f1;
 $dark-gray: #7f8c8d;
 
+// Main container
 .projects-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -18,24 +19,24 @@ $dark-gray: #7f8c8d;
   }
 }
 
+// Filter styles
 .filter-row {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   margin-bottom: 3rem;
   padding: 1rem;
-  background: $white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  box-shadow: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 
 .filter-icon {
-  display: none; // Hidden for a cleaner look, can be re-enabled if needed
+  display: none;
 }
 
 .filter-options {
@@ -54,33 +55,39 @@ $dark-gray: #7f8c8d;
   position: relative;
 
   .dropdown-button {
-    background: $primary-color;
-    color: $white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
+    background: $white;
+    color: $primary-black;
+    border: 2px solid $primary-black;
+    padding: 0.9rem 1.8rem;
+    border-radius: 34px;
     cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px $primary-black;
 
     &:hover {
-      background: darken($primary-color, 10%);
+      background: darken($white, 5%);
+      transform: translateY(-2px);
+      box-shadow: 6px 6px $primary-black;
     }
   }
 
   .dropdown-menu {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 10px);
     left: 0;
     background: $white;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid $primary-black;
+    box-shadow: 4px 4px $primary-black;
     min-width: 200px;
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s ease;
+    padding: 0.5rem 0;
 
     &.active {
       opacity: 1;
@@ -92,6 +99,7 @@ $dark-gray: #7f8c8d;
       padding: 0.8rem 1.2rem;
       cursor: pointer;
       transition: background-color 0.2s ease;
+      font-weight: 500;
 
       &:hover {
         background-color: $light-gray;
@@ -100,114 +108,190 @@ $dark-gray: #7f8c8d;
   }
 }
 
-.filter-tag {
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: 1px solid $light-gray;
+.wrapper {
+  --font-color-dark: #{$primary-black};
+  --font-color-light: #{$white};
+  --bg-color: #{$white};
+  --main-color: #{$primary-black};
 
-  &.active {
-    background: $primary-color;
-    color: $white;
-    border-color: $primary-color;
-  }
-
-  &.inactive {
-    background: $white;
-    color: $dark-gray;
-  }
-
-  &:hover {
-    transform: translateY(-2px);
-  }
+  position: relative;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 34px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-shadow: 4px 4px var(--main-color);
+  padding: 5px;
+  gap: 6px;
 }
 
+.option {
+  height: 40px;
+  position: relative;
+  flex-grow: 1;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  appearance: none;
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding: 0 1.5rem;
+}
+
+.span {
+  color: var(--font-color-dark);
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.input:checked + .btn {
+  background-color: var(--main-color);
+}
+
+.input:checked + .btn .span {
+  color: var(--font-color-light);
+}
+
+// Grid for the cards
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
   margin-top: 2rem;
-
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
 }
 
+// New style to make the card link behave correctly
+.project-card-link {
+  text-decoration: none; // Removes underline from link
+  color: inherit;      // Ensures text inside uses card's colors
+  display: block;      // Makes the anchor tag fill the grid area
+}
+
+/* Updated Project Card Styles */
 .project-card {
-  background: $white;
-  border-radius: 10px;
+  $card-bg: #1b233d;
+
+  height: 100%; // Ensures cards in the same row have the same height
+  border-radius: 20px;
+  background: $card-bg;
+  padding: 5px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  opacity: 1;
-  transform: scale(1);
+  box-shadow: 0 7px 20px 0 rgba(100, 100, 111, 0.2);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  position: relative; // Needed for z-index to work
+  z-index: 1;
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    z-index: 10; // Lifts the card above others on hover
   }
 
-  &.hidden {
-    opacity: 0;
-    transform: scale(0.95);
-    pointer-events: none;
-  }
+  .top-section {
+    height: 150px;
+    border-radius: 15px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
 
-  .project-image {
-    width: 100%;
-    height: 200px;
-    background: $light-gray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $dark-gray;
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
+    .border {
+      border-bottom-right-radius: 10px;
+      height: 30px;
+      width: 60%;
+      background: $card-bg;
+      position: relative;
+      transform: skew(-40deg);
+      box-shadow: -10px -10px 0 0 $card-bg;
 
-  .project-content {
-    padding: 1.5rem;
-
-    .project-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: $secondary-color;
-      margin-bottom: 0.75rem;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 0;
+        right: -15px;
+        background: transparent;
+        border-top-left-radius: 10px;
+        box-shadow: -5px -5px 0 2px $card-bg;
+      }
     }
 
-    .project-description {
-      color: $text-color;
-      line-height: 1.6;
-      margin-bottom: 1.25rem;
-      font-size: 0.9rem;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background: transparent;
+      height: 15px;
+      width: 15px;
+      border-top-left-radius: 15px;
+      box-shadow: -5px -5px 0 2px $card-bg;
+    }
+  }
+
+  .bottom-section {
+    margin-top: 15px;
+    padding: 10px 15px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .project-title {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: $white;
+      text-align: center;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
     }
 
     .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
 
       .project-tag {
-        background: $light-gray;
-        color: $secondary-color;
+        background: lighten($card-bg, 10%);
+        color: $white;
         padding: 0.4rem 0.8rem;
         border-radius: 15px;
         font-size: 0.75rem;
         font-weight: 500;
       }
     }
+
+    .project-description {
+      color: rgba(170, 222, 243, 0.8);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      text-align: center;
+      flex-grow: 1;
+    }
   }
 }
 
-// Animations
+// Card fade-in animation
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -220,5 +304,5 @@ $dark-gray: #7f8c8d;
 }
 
 .fade-in {
-  animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }

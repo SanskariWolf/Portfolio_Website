@@ -21,35 +21,46 @@
     </div>
 
     <div class="filter-options">
-      <span
-        *ngFor="let filterOption of filterOptions"
-        class="filter-tag"
-        [class.active]="activeFilters.has(filterOption.key)"
-        [class.inactive]="!activeFilters.has(filterOption.key)"
-        (click)="toggleFilter(filterOption.key)">
-        {{ filterOption.label }}
-      </span>
-    </div>
-  </div>
-
-  <div class="projects-grid">
-    <div
-      *ngFor="let project of projects"
-      class="project-card"
-      [class.hidden]="!shouldShowProject(project)">
-
-      <div class="project-image">{{ project.image }}</div>
-      <div class="project-content">
-        <h3 class="project-title">{{ project.title }}</h3>
-        <p class="project-description">{{ project.description }}</p>
-        <div class="project-tags">
-          <span
-            *ngFor="let tag of project.tags"
-            class="project-tag">
-            {{ getTagLabel(tag) }}
-          </span>
+      <div class="wrapper">
+        <div class="option" *ngFor="let filterOption of filterOptions">
+          <input
+            class="input"
+            type="checkbox"
+            [name]="filterOption.key"
+            [value]="filterOption.key"
+            [checked]="activeFilters.has(filterOption.key)"
+            (change)="toggleFilter(filterOption.key)">
+          <div class="btn">
+            <span class="span">{{ filterOption.label }}</span>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+
+   <div class="projects-grid">
+    <!-- The loop now creates an anchor tag for each project -->
+    <a *ngFor="let project of filteredProjects"
+       [href]="project.link"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="project-card-link">
+
+      <div class="project-card fade-in">
+        <div class="top-section" [style.background-image]="'url(' + project.image + ')'">
+          <div class="border"></div>
+        </div>
+        <div class="bottom-section">
+          <span class="project-title">{{ project.title }}</span>
+          <div class="project-tags">
+            <span *ngFor="let tag of project.tags" class="project-tag">
+              {{ getTagLabel(tag) }}
+            </span>
+          </div>
+          <p class="project-description">{{ project.description }}</p>
+        </div>
+      </div>
+
+    </a>
   </div>
 </div>

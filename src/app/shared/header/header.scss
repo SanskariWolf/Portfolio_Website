@@ -5,6 +5,8 @@
   flex-direction: column;
   box-shadow: 0 2px 8px rgba(1, 11, 19, 0.1);
   border-bottom: 4px solid #010b13;
+  position: relative; /* Add this */
+  z-index: 1000;      /* And this */
 }
 
 /* --- Top Row --- */
