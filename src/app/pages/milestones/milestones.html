@@ -1,31 +1,50 @@
 <div class="milestones-container">
   <!-- Side Panel -->
   <div class="side-panel">
-    <h2 class="panel-title">Milestones</h2>
     <div class="panel-options">
-      <div
-        class="panel-option"
-        [class.active]="selectedPanel === 'achievements'"
-        (click)="selectPanel('achievements')">
-        <span class="panel-icon">🏆</span>
-        <span class="panel-label">Achievements</span>
-      </div>
-      <div
-        class="panel-option"
-        [class.active]="selectedPanel === 'certifications'"
-        (click)="selectPanel('certifications')">
-        <span class="panel-icon">📜</span>
-        <span class="panel-label">Certifications</span>
-      </div>
-      <div
-        class="panel-option"
-        [class.active]="selectedPanel === 'badges'"
-        (click)="selectPanel('badges')">
-        <span class="panel-icon">🎖️</span>
-        <span class="panel-label">Badges</span>
+      <div class="wrap">
+        <input
+          [checked]="selectedPanel === 'achievements'"
+          (change)="selectPanel('achievements')"
+          type="radio"
+          id="rd-1"
+          name="radio"
+          class="rd-1"
+        />
+        <label for="rd-1" class="label">
+          <span>Achievements</span>
+        </label>
+
+        <input
+          [checked]="selectedPanel === 'certifications'"
+          (change)="selectPanel('certifications')"
+          type="radio"
+          id="rd-2"
+          name="radio"
+          class="rd-2"
+        />
+        <label for="rd-2" class="label">
+          <span>Certifications</span>
+        </label>
+
+        <input
+          [checked]="selectedPanel === 'badges'"
+          (change)="selectPanel('badges')"
+          type="radio"
+          id="rd-3"
+          name="radio"
+          class="rd-3"
+        />
+        <label for="rd-3" class="label">
+          <span>Badges</span>
+        </label>
+
+        <div class="bar"></div>
+        <div class="slidebar"></div>
       </div>
     </div>
   </div>
+
 
   <!-- Main Content Area -->
   <div class="content-area">
@@ -52,14 +71,20 @@
       </div>
 
       <div class="filter-options">
-        <span
-          *ngFor="let filterOption of getCurrentFilterOptions()"
-          class="filter-tag"
-          [class.active]="activeFilters.has(filterOption.key)"
-          [class.inactive]="!activeFilters.has(filterOption.key)"
-          (click)="toggleFilter(filterOption.key)">
-          {{ filterOption.label }}
-        </span>
+        <div class="wrapper">
+          <div class="option" *ngFor="let filterOption of getCurrentFilterOptions()">
+            <input
+              class="input"
+              type="checkbox"
+              [name]="filterOption.key"
+              [value]="filterOption.key"
+              [checked]="activeFilters.has(filterOption.key)"
+              (change)="toggleFilter(filterOption.key)">
+            <div class="btn">
+              <span class="span">{{ filterOption.label }}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

@@ -79,7 +79,7 @@ export class Milestones {
     { key: 'contribution', label: 'Contribution' }
   ];
 
-  // Sample data
+  // Sample data with random images
   achievements: Achievement[] = [
     {
       id: 1,
@@ -90,7 +90,7 @@ export class Milestones {
       teamMembers: ["John Doe", "Jane Smith", "Alex Johnson"],
       tags: ["webdev", "ai", "healthtech"],
       description: "Developed an AI-powered healthcare management system that streamlines patient care and reduces waiting times by 40%. Our solution integrated machine learning algorithms with a user-friendly web interface.",
-      image: "https://via.placeholder.com/300x200/ff6b35/ffffff?text=SIH+2023"
+      image: "https://picsum.photos/seed/sih2023/300/200"
     },
     {
       id: 2,
@@ -101,7 +101,7 @@ export class Milestones {
       teamMembers: ["Sarah Wilson", "Mike Chen", "David Kumar"],
       tags: ["blockchain", "fintech"],
       description: "Created a decentralized lending platform with automated risk assessment and yield optimization. The platform processed over $100K in test transactions during the demo phase.",
-      image: "https://via.placeholder.com/300x200/1a659e/ffffff?text=ETH+Global"
+      image: "https://picsum.photos/seed/ethglobal/300/200"
     },
     {
       id: 3,
@@ -112,7 +112,7 @@ export class Milestones {
       teamMembers: ["Lisa Park", "Ahmed Hassan"],
       tags: ["mobile", "ai", "healthtech"],
       description: "Built a mobile app using Flutter and TensorFlow Lite for early detection of plant diseases, helping farmers increase crop yield by 25% through timely intervention.",
-      image: "https://via.placeholder.com/300x200/9ab7bd/ffffff?text=Google+Challenge"
+      image: "https://picsum.photos/seed/googlechallenge/300/200"
     },
     {
       id: 4,
@@ -123,7 +123,7 @@ export class Milestones {
       teamMembers: ["Robert Taylor", "Emma Davis", "Carlos Rodriguez", "Nina Patel"],
       tags: ["cybersecurity", "iot"],
       description: "Developed a comprehensive IoT security framework that identifies and mitigates vulnerabilities in smart home devices. Our solution detected 95% of known attack vectors in testing.",
-      image: "https://via.placeholder.com/300x200/004e89/ffffff?text=CyberSec+Champ"
+      image: "https://picsum.photos/seed/cybersec/300/200"
     }
   ];
 
@@ -136,7 +136,7 @@ export class Milestones {
       expiryDate: "March 2026",
       certificateId: "AWS-SAP-2023-001234",
       tags: ["cloud", "devops"],
-      image: "https://via.placeholder.com/150x100/ff6b35/ffffff?text=AWS"
+      image: "https://picsum.photos/seed/aws/300/200"
     },
     {
       id: 2,
@@ -146,7 +146,7 @@ export class Milestones {
       expiryDate: "January 2026",
       certificateId: "CEH-2023-567890",
       tags: ["cybersecurity"],
-      image: "https://via.placeholder.com/150x100/1a659e/ffffff?text=CEH"
+      image: "https://picsum.photos/seed/ceh/300/200"
     },
     {
       id: 3,
@@ -156,17 +156,16 @@ export class Milestones {
       expiryDate: "February 2025",
       certificateId: "GCP-PCA-2023-112233",
       tags: ["cloud", "devops"],
-      image: "https://via.placeholder.com/150x100/9ab7bd/ffffff?text=GCP"
+      image: "https://picsum.photos/seed/gcp/300/200"
     },
     {
       id: 4,
       name: "MongoDB Certified Developer",
       issuingOrganization: "MongoDB Inc.",
       issueDate: "December 2022",
-      // No expiry date - lifetime certification
       certificateId: "MONGO-DEV-2022-445566",
       tags: ["database", "programming"],
-      image: "https://via.placeholder.com/150x100/c8d6cd/ffffff?text=MongoDB"
+      image: "https://picsum.photos/seed/mongodb/300/200"
     },
     {
       id: 5,
@@ -176,17 +175,16 @@ export class Milestones {
       expiryDate: "November 2025",
       certificateId: "PMP-2022-778899",
       tags: ["projectmanagement"],
-      image: "https://via.placeholder.com/150x100/f7c59f/ffffff?text=PMP"
+      image: "https://picsum.photos/seed/pmp/300/200"
     },
     {
       id: 6,
       name: "Adobe Certified Expert - UX Design",
       issuingOrganization: "Adobe Inc.",
       issueDate: "October 2022",
-      // Lifetime certification
       certificateId: "ADOBE-UX-2022-990011",
       tags: ["design"],
-      image: "https://via.placeholder.com/150x100/fb986a/ffffff?text=Adobe"
+      image: "https://picsum.photos/seed/adobe/300/200"
     }
   ];
 
@@ -195,49 +193,49 @@ export class Milestones {
       id: 1,
       name: "100 Days of Code",
       tags: ["coding"],
-      image: "https://via.placeholder.com/80x80/ff6b35/ffffff?text=100Days"
+      image: "https://picsum.photos/seed/100days/200/200"
     },
     {
       id: 2,
       name: "Open Source Contributor",
       tags: ["opensource", "contribution"],
-      image: "https://via.placeholder.com/80x80/1a659e/ffffff?text=OSS"
+      image: "https://picsum.photos/seed/oss/200/200"
     },
     {
       id: 3,
       name: "Hackathon Hero",
       tags: ["hackathon", "coding"],
-      image: "https://via.placeholder.com/80x80/9ab7bd/ffffff?text=Hack"
+      image: "https://picsum.photos/seed/hack/200/200"
     },
     {
       id: 4,
       name: "Community Leader",
       tags: ["community", "mentorship"],
-      image: "https://via.placeholder.com/80x80/c8d6cd/ffffff?text=Leader"
+      image: "https://picsum.photos/seed/leader/200/200"
     },
     {
       id: 5,
       name: "Code Mentor",
       tags: ["mentorship", "community"],
-      image: "https://via.placeholder.com/80x80/f7c59f/ffffff?text=Mentor"
+      image: "https://picsum.photos/seed/mentor/200/200"
     },
     {
       id: 6,
       name: "GitHub Star",
       tags: ["opensource", "contribution"],
-      image: "https://via.placeholder.com/80x80/fb986a/ffffff?text=GitHub"
+      image: "https://picsum.photos/seed/github/200/200"
     },
     {
       id: 7,
       name: "DevPost Winner",
       tags: ["hackathon", "coding"],
-      image: "https://via.placeholder.com/80x80/7ba2b3/ffffff?text=DevPost"
+      image: "https://picsum.photos/seed/devpost/200/200"
     },
     {
       id: 8,
       name: "Stack Overflow Contributor",
       tags: ["community", "contribution"],
-      image: "https://via.placeholder.com/80x80/f6ddbe/ffffff?text=SO"
+      image: "https://picsum.photos/seed/so/200/200"
     }
   ];
 
@@ -318,7 +316,6 @@ export class Milestones {
     } else {
       this.activeFilters.add(filter);
     }
-    this.isDropdownOpen = false;
   }
 
   selectAll(): void {
