@@ -56,80 +56,81 @@ export class Milestones {
     { key: 'mobile', label: 'Mobile App' },
     { key: 'iot', label: 'IoT' },
     { key: 'cybersecurity', label: 'Cybersecurity' },
-    { key: 'fintech', label: 'FinTech' },
-    { key: 'healthtech', label: 'HealthTech' }
+    { key: 'uiux', label: 'UI/UX' },
   ];
 
   certificationFilterOptions: FilterOption[] = [
-    { key: 'cloud', label: 'Cloud Computing' },
+    { key: 'webdev', label: 'Web Development' },
+    { key: 'blockchain', label: 'Blockchain' },
+    { key: 'ai', label: 'AI/ML' },
+    { key: 'mobile', label: 'Mobile App' },
+    { key: 'iot', label: 'IoT' },
     { key: 'cybersecurity', label: 'Cybersecurity' },
-    { key: 'programming', label: 'Programming' },
-    { key: 'database', label: 'Database' },
-    { key: 'devops', label: 'DevOps' },
-    { key: 'projectmanagement', label: 'Project Management' },
-    { key: 'design', label: 'Design' }
+    { key: 'uiux', label: 'UI/UX' },
   ];
 
   badgeFilterOptions: FilterOption[] = [
-    { key: 'coding', label: 'Coding' },
-    { key: 'opensource', label: 'Open Source' },
-    { key: 'community', label: 'Community' },
-    { key: 'mentorship', label: 'Mentorship' },
-    { key: 'hackathon', label: 'Hackathon' },
-    { key: 'contribution', label: 'Contribution' }
+    { key: 'webdev', label: 'Web Development' },
+    { key: 'blockchain', label: 'Blockchain' },
+    { key: 'ai', label: 'AI/ML' },
+    { key: 'mobile', label: 'Mobile App' },
+    { key: 'iot', label: 'IoT' },
+    { key: 'cybersecurity', label: 'Cybersecurity' },
+    { key: 'uiux', label: 'UI/UX' },
+    { key: 'languages', label: 'Languages' },
   ];
 
   // Sample data with random images
   achievements: Achievement[] = [
     {
-      id: 1,
-      competition: "Smart India Hackathon 2023",
-      organizer: "Government of India",
-      position: "Winner",
-      teamName: "CodeCrafters",
-      teamMembers: ["John Doe", "Jane Smith", "Alex Johnson"],
-      tags: ["webdev", "ai", "healthtech"],
-      description: "Developed an AI-powered healthcare management system that streamlines patient care and reduces waiting times by 40%. Our solution integrated machine learning algorithms with a user-friendly web interface.",
-      image: "https://picsum.photos/seed/sih2023/300/200"
-    },
-    {
-      id: 2,
-      competition: "Ethereum Global Hackathon",
-      organizer: "Ethereum Foundation",
-      position: "2nd",
-      teamName: "DeFi Innovators",
-      teamMembers: ["Sarah Wilson", "Mike Chen", "David Kumar"],
-      tags: ["blockchain", "fintech"],
-      description: "Created a decentralized lending platform with automated risk assessment and yield optimization. The platform processed over $100K in test transactions during the demo phase.",
-      image: "https://picsum.photos/seed/ethglobal/300/200"
+      id: 4,
+      competition: "GooseCTF",
+      organizer: "Warwick Cyber Security Society ",
+      position: "3rd",
+      teamName: "Obsidian Howlers",
+      teamMembers: ["Pratham Gupta", "Tanush Purwar", "Tanush Purwar"],
+      tags: ["cybersecurity"],
+      description: "",
+      image: "https://media.licdn.com/dms/image/v2/D5622AQFgaTaP7OljZg/feedshare-shrink_800/B56ZbV_hHAHUAk-/0/1747346921127?e=1762992000&v=beta&t=3HWGIlQel0-5XnmTeGo0h7pbouRw4dz9sNOYTCuZgAw"
     },
     {
       id: 3,
-      competition: "Google Solution Challenge",
-      organizer: "Google Developer Student Clubs",
+      competition: "Regional Hack - Delhi, India",
+      organizer: "EduChain x HackQuest",
       position: "3rd",
-      teamName: "Tech for Good",
-      teamMembers: ["Lisa Park", "Ahmed Hassan"],
-      tags: ["mobile", "ai", "healthtech"],
-      description: "Built a mobile app using Flutter and TensorFlow Lite for early detection of plant diseases, helping farmers increase crop yield by 25% through timely intervention.",
-      image: "https://picsum.photos/seed/googlechallenge/300/200"
+      teamName: "Pump & Dump",
+      teamMembers: ["Manan Wadhwa", "Angh Mighlani", "Tanush Purwar"],
+      tags: ["webdev", "ai", "blockchain"],
+      description: "SmartGuard - AI-based Fuzzer for Smart Contracts. The fuzzing policy, which is used to generate transactions, is represented by an ensemble of neural networks and is learned from thousands of high-quality sequences of transactions generated using symbolic execution.",
+      image: "https://media.licdn.com/dms/image/v2/D5622AQEvI7QOOQ4wyw/feedshare-shrink_800/B56ZYl2evLHQAg-/0/1744391794412?e=1762992000&v=beta&t=x08LF6gsYCw4a-W0cbZ1HwTEP2vV8J78WO5NRancliQ"
     },
     {
-      id: 4,
-      competition: "CyberSec National Championship",
-      organizer: "National Cybersecurity Alliance",
-      position: "1st",
-      teamName: "SecureNet",
-      teamMembers: ["Robert Taylor", "Emma Davis", "Carlos Rodriguez", "Nina Patel"],
-      tags: ["cybersecurity", "iot"],
-      description: "Developed a comprehensive IoT security framework that identifies and mitigates vulnerabilities in smart home devices. Our solution detected 95% of known attack vectors in testing.",
-      image: "https://picsum.photos/seed/cybersec/300/200"
+      id: 2,
+      competition: "Designathon'24-25",
+      organizer: "Strokes | The IIITN Design Club",
+      position: "2nd",
+      teamName: "The Hephaetus Guild",
+      teamMembers: ["Vipul Kohli", "Pratyaksh Agarwal", "Tanush Purwar"],
+      tags: ["uiux"],
+      description: "Created a comprehensive space for individuals to connect together to achieve emotion liberation. MindLamp is open space for the individuals to express their vulnerabilities and find catharsis.",
+      image: "https://media.licdn.com/dms/image/v2/D5622AQEd_mDsefGwSg/feedshare-shrink_1280/B56ZRhR3pMHwAk-/0/1736798891144?e=1762992000&v=beta&t=d0SFl-YcABUTWtXEGCyBdBiWJk8ciAlRjvPgdAAm1QU"
+    },
+    {
+      id: 1,
+      competition: "HackMait 3.0",
+      organizer: "IOSD-MAIT at Impulse'24",
+      position: "2nd",
+      teamName: "K-OS",
+      teamMembers: ["Arnav Chopra", "Tanush Purwar", "Shvivam Kumar Jha"],
+      tags: ["blockchain", "iot"],
+      description: "Blockchain based system for the voting process of India. This project was aimed towards the security and stability of the voting process.",
+      image: "https://media.licdn.com/dms/image/v2/D5622AQFGzCDhTdjnGA/feedshare-shrink_800/feedshare-shrink_800/0/1720455670112?e=1762992000&v=beta&t=N1tUYIJGakx56tgpUg4mw4YPfaRYLhgbVVacowu1n6E"
     }
   ];
 
   certifications: Certification[] = [
     {
-      id: 1,
+      id: 6,
       name: "AWS Certified Solutions Architect - Professional",
       issuingOrganization: "Amazon Web Services",
       issueDate: "March 2023",
@@ -139,7 +140,7 @@ export class Milestones {
       image: "https://picsum.photos/seed/aws/300/200"
     },
     {
-      id: 2,
+      id: 5,
       name: "Certified Ethical Hacker (CEH)",
       issuingOrganization: "EC-Council",
       issueDate: "January 2023",
@@ -149,7 +150,7 @@ export class Milestones {
       image: "https://picsum.photos/seed/ceh/300/200"
     },
     {
-      id: 3,
+      id: 4,
       name: "Google Cloud Professional Cloud Architect",
       issuingOrganization: "Google Cloud",
       issueDate: "February 2023",
@@ -159,7 +160,7 @@ export class Milestones {
       image: "https://picsum.photos/seed/gcp/300/200"
     },
     {
-      id: 4,
+      id: 3,
       name: "MongoDB Certified Developer",
       issuingOrganization: "MongoDB Inc.",
       issueDate: "December 2022",
@@ -168,7 +169,7 @@ export class Milestones {
       image: "https://picsum.photos/seed/mongodb/300/200"
     },
     {
-      id: 5,
+      id: 2,
       name: "Project Management Professional (PMP)",
       issuingOrganization: "Project Management Institute",
       issueDate: "November 2022",
@@ -178,7 +179,7 @@ export class Milestones {
       image: "https://picsum.photos/seed/pmp/300/200"
     },
     {
-      id: 6,
+      id: 1,
       name: "Adobe Certified Expert - UX Design",
       issuingOrganization: "Adobe Inc.",
       issueDate: "October 2022",
@@ -190,49 +191,49 @@ export class Milestones {
 
   badges: Badge[] = [
     {
-      id: 1,
-      name: "100 Days of Code",
-      tags: ["coding"],
-      image: "https://picsum.photos/seed/100days/200/200"
+      id: 8,
+      name: "Introduction to Cybersecurity",
+      tags: ["cybersecurity"],
+      image: "https://images.credly.com/size/110x110/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png"
     },
     {
-      id: 2,
-      name: "Open Source Contributor",
-      tags: ["opensource", "contribution"],
-      image: "https://picsum.photos/seed/oss/200/200"
-    },
-    {
-      id: 3,
-      name: "Hackathon Hero",
-      tags: ["hackathon", "coding"],
-      image: "https://picsum.photos/seed/hack/200/200"
-    },
-    {
-      id: 4,
-      name: "Community Leader",
-      tags: ["community", "mentorship"],
-      image: "https://picsum.photos/seed/leader/200/200"
-    },
-    {
-      id: 5,
-      name: "Code Mentor",
-      tags: ["mentorship", "community"],
-      image: "https://picsum.photos/seed/mentor/200/200"
+      id: 7,
+      name: "Junior Cybersecurity Analyst Career Path",
+      tags: ["cybersecurity"],
+      image: "https://images.credly.com/size/110x110/images/441578ec-c0f3-46cc-95fc-86b27e90cf4f/image.png"
     },
     {
       id: 6,
+      name: "Python for Data Science",
+      tags: ["languages"],
+      image: "https://images.credly.com/size/110x110/images/b40db465-587f-45eb-a854-af8630a630e7/blob"
+    },
+    {
+      id: 5,
+      name: "ISC2 Candidate",
+      tags: ["cybersecurity"],
+      image: "https://images.credly.com/size/110x110/images/9180921d-4a13-429e-9357-6f9706a554f0/image.png"
+    },
+    {
+      id: 4,
+      name: "D-CTF Quals 2025 - Participants",
+      tags: ["cybersecurity"],
+      image: "https://api.cyber-edu.co/images/badges/H6u48GhM0eROhOzE.jpeg"
+    },
+    {
+      id: 3,
       name: "GitHub Star",
       tags: ["opensource", "contribution"],
       image: "https://picsum.photos/seed/github/200/200"
     },
     {
-      id: 7,
+      id: 2,
       name: "DevPost Winner",
       tags: ["hackathon", "coding"],
       image: "https://picsum.photos/seed/devpost/200/200"
     },
     {
-      id: 8,
+      id: 1,
       name: "Stack Overflow Contributor",
       tags: ["community", "contribution"],
       image: "https://picsum.photos/seed/so/200/200"

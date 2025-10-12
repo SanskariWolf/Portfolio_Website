@@ -37,67 +37,11 @@ export class Projects {
   projects: Project[] = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with modern UI/UX design, secure payment integration, and robust backend infrastructure.",
-      tags: ["webdev", "database", "uiux"],
-      image: "https://picsum.photos/seed/ecommerce/400/300",
-      link: "#" // Replace with your project link
-    },
-    {
-      id: 2,
-      title: "Crypto Trading Bot",
-      description: "Automated cryptocurrency trading bot with machine learning algorithms for market analysis and risk management.",
-      tags: ["blockchain", "database"],
-      image: "https://picsum.photos/seed/crypto/400/300",
-      link: "#" // Replace with your project link
-    },
-    {
-      id: 3,
-      title: "Security Audit Tool",
-      description: "Comprehensive cybersecurity tool for vulnerability assessment and penetration testing of web applications.",
-      tags: ["cybersecurity", "webdev"],
-      image: "https://picsum.photos/seed/security/400/300",
-      link: "#" // Replace with your project link
-    },
-    {
-      id: 4,
-      title: "Container Orchestration",
-      description: "Scalable microservices architecture deployed using Docker containers and Kubernetes orchestration.",
-      tags: ["docker", "database", "webdev"],
-      image: "https://picsum.photos/seed/docker/400/300",
-      link: "#" // Replace with your project link
-    },
-    {
-      id: 5,
-      title: "DeFi Smart Contract",
-      description: "Decentralized finance protocol with yield farming capabilities and automated market maker functionality.",
-      tags: ["blockchain", "cybersecurity"],
-      image: "https://picsum.photos/seed/defi/400/300",
-      link: "#" // Replace with your project link
-    },
-    {
-      id: 6,
-      title: "Design System Library",
-      description: "Comprehensive UI component library with design tokens, accessibility features, and documentation.",
-      tags: ["uiux", "webdev"],
-      image: "https://picsum.photos/seed/design/400/300",
-      link: "#" // Replace with your project link
-    },
-    {
-      id: 7,
-      title: "Database Migration Tool",
-      description: "Advanced database migration and synchronization tool supporting multiple database engines with rollback capabilities.",
-      tags: ["database", "docker"],
-      image: "https://picsum.photos/seed/database/400/300",
-      link: "#" // Replace with your project link
-    },
-    {
-      id: 8,
-      title: "Penetration Testing Framework",
-      description: "Automated penetration testing framework with custom vulnerability scanners and reporting dashboard.",
-      tags: ["cybersecurity"],
-      image: "https://picsum.photos/seed/pentest/400/300",
-      link: "#" // Replace with your project link
+      title: "Portfolio Website",
+      description: "A personal portfolio website showcasing my projects and skills.",
+      tags: ["webdev", "uiux"],
+      image: "./logo.svg",
+      link: "https://github.com/SanskariWolf/Portfolio_Website" // Replace with your project link
     }
   ];
 
