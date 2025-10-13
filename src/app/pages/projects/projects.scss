@@ -209,42 +209,8 @@ $dark-gray: #7f8c8d;
     height: 150px;
     border-radius: 15px;
     position: relative;
-    background-size: cover;
     background-position: center;
-
-    .border {
-      border-bottom-right-radius: 10px;
-      height: 30px;
-      width: 60%;
-      background: $card-bg;
-      position: relative;
-      transform: skew(-40deg);
-      box-shadow: -10px -10px 0 0 $card-bg;
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        top: 0;
-        right: -15px;
-        background: transparent;
-        border-top-left-radius: 10px;
-        box-shadow: -5px -5px 0 2px $card-bg;
-      }
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 30px;
-      left: 0;
-      background: transparent;
-      height: 15px;
-      width: 15px;
-      border-top-left-radius: 15px;
-      box-shadow: -5px -5px 0 2px $card-bg;
-    }
+    border: 1px solid #ffffff;
   }
 
   .bottom-section {

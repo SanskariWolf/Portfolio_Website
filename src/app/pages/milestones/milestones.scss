@@ -12,6 +12,17 @@ $gold-color: #ffc107;
 $silver-color: #c0c0c0;
 $bronze-color: #cd7f32;
 
+// Dark palette for cards
+$card-bg-dark: #0f172a;
+$card-bg-dark-2: #111827;
+$text-primary-dark: #e5e7eb;
+$text-muted-dark: #9ca3af;
+
+// Brand colors requested
+$brand-button: #1a659e;        // default button color
+$brand-button-hover-orange: #ff8a00; // turns orange on hover
+$brand-tag: #2b3760;           // tag color
+
 .milestones-container {
   display: flex;
   min-height: 100vh;
@@ -28,7 +39,7 @@ $bronze-color: #cd7f32;
 
 // Side Panel Styles
 .side-panel {
-  width: 250px; // Adjusted width for vertical panel
+  width: 250px;
   height: fit-content;
   position: sticky;
   top: 2rem;
@@ -36,7 +47,7 @@ $bronze-color: #cd7f32;
   @media (max-width: 768px) {
     width: 100%;
     position: static;
-    padding: 1.5rem;
+    padding: 1.5rem 0;
   }
 
   .panel-title {
@@ -48,23 +59,21 @@ $bronze-color: #cd7f32;
   }
 }
 
-/* New Vertical Side Panel Styles */
+/* Vertical Side Panel Styles (unchanged) */
 .panel-options {
-  // New variables for vertical layout
   --round: 10px;
   --p-x: 6px;
   --p-y: 6px;
-  --h-label: 60px; // Height of each label
+  --h-label: 60px;
 
-  // Color variables from the project
   --color-pure: #{$white};
-  --color-primary: transparent; // Main background
-  --color-secondary: #{$primary-black}; // Active text and lines
-  --muted: #{$light-gray}; // sliding bar background
+  --color-primary: transparent;
+  --color-secondary: #{$primary-black};
+  --muted: #{$light-gray};
 
   .wrap {
     display: flex;
-    flex-direction: column; // Set to vertical
+    flex-direction: column;
     align-items: center;
     padding: var(--p-y) var(--p-x);
     position: relative;
@@ -89,7 +98,7 @@ $bronze-color: #cd7f32;
     color: var(--color-secondary);
     padding: 12px 16px;
     height: var(--h-label);
-    width: 100%; // Labels take full width
+    width: 100%;
     text-decoration: none;
     user-select: none;
     transition: color 0.25s ease;
@@ -113,10 +122,11 @@ $bronze-color: #cd7f32;
     z-index: 0;
     transition: transform 0.5s cubic-bezier(0.33, 0.83, 0.99, 0.98);
 
-    &::before, &::after {
+    &::before,
+    &::after {
       content: "";
       position: absolute;
-      width: 4px; // Vertical lines
+      width: 4px;
       height: 100%;
       background: var(--color-secondary);
     }
@@ -131,24 +141,17 @@ $bronze-color: #cd7f32;
     height: var(--h-label);
     width: calc(100% - (var(--p-x) * 2));
     border-radius: calc(var(--round) - var(--p-y));
-    background: var(--color-secondary); // Use secondary color for active background
+    background: var(--color-secondary);
     z-index: 1;
     transition: transform 0.5s cubic-bezier(0.33, 0.83, 0.99, 0.98);
   }
 
-  // Vertical transform logic
   .rd-1:checked ~ .bar,
-  .rd-1:checked ~ .slidebar {
-    transform: translateY(calc(var(--h-label) * 0));
-  }
+  .rd-1:checked ~ .slidebar { transform: translateY(calc(var(--h-label) * 0)); }
   .rd-2:checked ~ .bar,
-  .rd-2:checked ~ .slidebar {
-    transform: translateY(calc(var(--h-label) * 1));
-  }
+  .rd-2:checked ~ .slidebar { transform: translateY(calc(var(--h-label) * 1)); }
   .rd-3:checked ~ .bar,
-  .rd-3:checked ~ .slidebar {
-    transform: translateY(calc(var(--h-label) * 2));
-  }
+  .rd-3:checked ~ .slidebar { transform: translateY(calc(var(--h-label) * 2)); }
 }
 
 // Content Area Styles
@@ -158,7 +161,7 @@ $bronze-color: #cd7f32;
   flex-direction: column;
 }
 
-// Filter styles
+// Filter styles (unchanged)
 .filter-row {
   display: flex;
   align-items: center;
@@ -174,9 +177,7 @@ $bronze-color: #cd7f32;
   }
 }
 
-.filter-icon {
-  display: none;
-}
+.filter-icon { display: none; }
 
 .filter-options {
   display: flex;
@@ -185,9 +186,7 @@ $bronze-color: #cd7f32;
   flex: 1;
   align-items: center;
 
-  @media (max-width: 768px) {
-    justify-content: center;
-  }
+  @media (max-width: 768px) { justify-content: center; }
 }
 
 .filter-dropdown {
@@ -240,9 +239,7 @@ $bronze-color: #cd7f32;
       transition: background-color 0.2s ease;
       font-weight: 500;
 
-      &:hover {
-        background-color: $light-gray;
-      }
+      &:hover { background-color: $light-gray; }
     }
   }
 }
@@ -265,66 +262,35 @@ $bronze-color: #cd7f32;
   gap: 6px;
 }
 
-.option {
-  height: 40px;
-  position: relative;
-  flex-grow: 1;
-}
+.option { height: 40px; position: relative; flex-grow: 1; }
 
 .input {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  appearance: none;
-  cursor: pointer;
+  width: 100%; height: 100%;
+  position: absolute; left: 0; top: 0;
+  appearance: none; cursor: pointer;
 }
 
 .btn {
-  width: 100%;
-  height: 100%;
+  width: 100%; height: 100%;
   background-color: var(--bg-color);
   border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-  padding: 0 1.5rem;
+  display: flex; justify-content: center; align-items: center;
+  transition: all 0.3s ease; padding: 0 1.5rem;
 }
 
-.span {
-  color: var(--font-color-dark);
-  font-size: 0.95rem;
-  font-weight: 500;
-  white-space: nowrap;
-}
+.span { color: var(--font-color-dark); font-size: 0.95rem; font-weight: 500; white-space: nowrap; }
 
-.input:checked + .btn {
-  background-color: var(--main-color);
-}
-
-.input:checked + .btn .span {
-  color: var(--font-color-light);
-}
-
+.input:checked + .btn { background-color: var(--main-color); }
+.input:checked + .btn .span { color: var(--font-color-light); }
 
 // Content Grid Styles
 .content-grid {
   display: grid;
   gap: 2rem;
 
-  &.achievements-grid {
-    grid-template-columns: 1fr;
-  }
-
-  &.certifications-grid {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  }
-
-  &.badges-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
+  &.achievements-grid { grid-template-columns: 1fr; }
+  &.certifications-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  &.badges-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
 }
 
 // Card Hidden State
@@ -339,218 +305,189 @@ $bronze-color: #cd7f32;
   overflow: hidden !important;
 }
 
+/* =======================
+   Clean, modern dark cards
+   ======================= */
 
-// Achievement Card Styles
+.achievement-card,
+.certification-card,
+.badge-card {
+  background: $card-bg-dark;
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: $text-primary-dark;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+  }
+}
+
+/* Achievement Card */
 .achievement-card {
-  background: $white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s ease;
+  overflow: hidden;
   display: flex;
   gap: 2rem;
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  }
+  @media (max-width: 768px) { flex-direction: column; }
 
   .achievement-image {
-    width: 250px;
+    width: 300px;
+    aspect-ratio: 1 / 1;
     flex-shrink: 0;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
-    }
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    @media (max-width: 768px) { width: 100%; }
   }
 
   .achievement-content {
-    padding: 2rem;
-    flex: 1;
+    padding: 2rem; flex: 1;
 
     .competition-info {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
 
       .competition-name {
-        font-size: 1.25rem;
-        font-weight: 600;
-        color: $text-color;
-        margin-bottom: 0.5rem;
+        font-size: 1.25rem; font-weight: 700;
+        color: $text-primary-dark; margin-bottom: 0.5rem;
       }
 
-      .organizer {
-        color: $dark-gray;
-        font-size: 1rem;
-        margin-bottom: 1rem;
-      }
+      .organizer { color: $text-muted-dark; font-size: 1rem; margin-bottom: 0.75rem; }
 
       .position-badge {
         display: inline-block;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        font-weight: 600;
-        font-size: 0.9rem;
+        padding: 0.45rem 0.9rem;
+        font-size: 0.9rem; font-weight: 700;
+        border-radius: 999px;
 
-        &.position-1st {
-          background: $gold-color;
-          color: $white;
-        }
-
-        &.position-2nd {
-          background: $silver-color;
-          color: $white;
-        }
-
-        &.position-3rd {
-          background: $bronze-color;
-          color: $white;
-        }
-
-        &.position-winner {
-          background: $success-color;
-          color: $white;
-        }
+        &.position-1st { background: $gold-color; color: #222; }
+        &.position-2nd { background: $silver-color; color: #222; }
+        &.position-3rd { background: $bronze-color; color: #fff; }
+        &.position-winner { background: $success-color; color: #fff; }
       }
     }
 
     .team-info {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
 
       .team-name {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: $text-color;
-        margin-bottom: 0.5rem;
+        font-size: 1.05rem; font-weight: 700;
+        color: $text-primary-dark; margin-bottom: 0.5rem;
       }
 
       .team-members {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
+        display: flex; flex-wrap: wrap; gap: 0.5rem;
 
         .team-member {
-          background: $light-gray;
-          color: $dark-gray;
-          padding: 0.3rem 0.8rem;
-          border-radius: 12px;
-          font-size: 0.85rem;
+          position: relative;
+          display: inline-flex; align-items: center; gap: 8px;
+          padding: 0.35rem 0.85rem 0.35rem 2rem;
+          border-radius: 999px;
+          background: rgba(255,255,255,0.06);
+          border: 1px solid rgba(255,255,255,0.12);
+          color: $text-primary-dark;
+          text-decoration: none;
+          font-size: 0.8rem; /* smaller font for team members */
+          transition: background 0.2s ease, border-color 0.2s ease;
+
+          .icon-ln {
+            position: absolute;
+            left: 10px; top: 50%;
+            transform: translateY(-50%) scale(0.85);
+            opacity: 0; width: 18px; height: 18px;
+            transition: opacity 0.15s ease, transform 0.15s ease;
+            color: #0a66c2; /* LinkedIn blue */
+          }
+
+          &:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.22);
+          }
+          &:hover .icon-ln { opacity: 1; transform: translateY(-50%) scale(1); }
         }
       }
     }
 
     .achievement-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
+      display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;
 
       .achievement-tag {
-        background: $light-gray;
-        color: $dark-gray;
-        padding: 0.4rem 0.8rem;
-        border-radius: 15px;
-        font-size: 0.75rem;
-        font-weight: 500;
+        background: $brand-tag; color: #fff;
+        padding: 0.4rem 0.8rem; border-radius: 999px;
+        font-size: 0.75rem; font-weight: 700;
+        transition: background 0.2s ease;
+
+        &:hover { background: lighten($brand-tag, 6%); }
       }
     }
 
     .achievement-description {
-      color: $text-color;
-      line-height: 1.6;
-      font-size: 0.95rem;
+      color: $text-primary-dark;
+      line-height: 1.6; font-size: 0.95rem;
+    }
+
+    .achievement-actions {
+      margin-top: 1rem;
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      .project-btn {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: $brand-button; color: #fff;
+        border: none; border-radius: 10px;
+        padding: 0.65rem 1rem; font-weight: 800;
+        text-decoration: none;
+        transition: background 0.2s ease;
+
+        .icon-gh { width: 18px; height: 18px; display: inline-block; }
+
+        &:hover { background: $brand-button-hover-orange; } /* turn orange on hover */
+      }
     }
   }
 }
 
-// Certification Card Styles
+/* Certification Card */
 .certification-card {
-  background: $white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  }
+  overflow: hidden;
 
   .certification-image {
-    width: 100%;
-    height: 150px;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    }
+    width: 100%; height: 160px;
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
   }
 
   .certification-content {
     padding: 1.5rem;
 
     .certification-name {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: $text-color;
-      margin-bottom: 0.5rem;
+      font-size: 1.1rem; font-weight: 700;
+      color: $text-primary-dark; margin-bottom: 0.5rem;
     }
 
-    .issuing-org {
-      color: $dark-gray;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
+    .issuing-org { color: $text-muted-dark; font-size: 0.95rem; margin-bottom: 1rem; }
 
     .certification-dates {
-      margin-bottom: 1rem;
-      font-size: 0.85rem;
-      color: $dark-gray;
+      margin-bottom: 1rem; font-size: 0.9rem; color: $text-muted-dark;
+      display: grid; gap: 0.25rem;
+      strong { color: $text-primary-dark; }
     }
 
     .certificate-id {
-      font-size: 0.8rem;
-      color: $dark-gray;
-      word-break: break-all;
+      font-size: 0.85rem; color: $text-muted-dark; word-break: break-all;
     }
   }
 }
 
-// Badge Card Styles
+/* Badge Card */
 .badge-card {
-  background: $white;
-  border-radius: 10px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  }
+  text-align: center; padding: 1.5rem;
 
   .badge-image {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1rem;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+    width: 90px; height: 90px; margin: 0 auto 1rem;
+    img { width: 100%; height: 100%; object-fit: contain; display: block; }
   }
 
-  .badge-content {
-    .badge-name {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: $text-color;
-    }
+  .badge-content .badge-name {
+    font-size: 0.95rem; font-weight: 700; color: $text-primary-dark;
   }
 }

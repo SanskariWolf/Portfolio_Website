@@ -45,7 +45,6 @@
     </div>
   </div>
 
-
   <!-- Main Content Area -->
   <div class="content-area">
     <!-- Filter Row -->
@@ -64,7 +63,8 @@
           <div
             *ngFor="let option of getCurrentFilterOptions()"
             class="dropdown-item"
-            (click)="toggleFilter(option.key)">
+            (click)="toggleFilter(option.key)"
+          >
             {{ option.label }}
           </div>
         </div>
@@ -79,7 +79,8 @@
               [name]="filterOption.key"
               [value]="filterOption.key"
               [checked]="activeFilters.has(filterOption.key)"
-              (change)="toggleFilter(filterOption.key)">
+              (change)="toggleFilter(filterOption.key)"
+            />
             <div class="btn">
               <span class="span">{{ filterOption.label }}</span>
             </div>
@@ -93,8 +94,8 @@
       <div
         *ngFor="let achievement of achievements"
         class="achievement-card"
-        [class.hidden]="!shouldShowItem(achievement)">
-
+        [class.hidden]="!shouldShowItem(achievement)"
+      >
         <div class="achievement-image">
           <img [src]="achievement.image" [alt]="achievement.competition" />
         </div>
@@ -109,11 +110,25 @@
           </div>
 
           <div class="team-info">
-            <h4 class="team-name">{{ achievement.teamName }}</h4>
+            <h2 class="team-name">Team: {{ achievement.teamName }}</h2>
             <div class="team-members">
-              <span *ngFor="let member of achievement.teamMembers" class="team-member">
-                {{ member }}
-              </span>
+              <a
+                *ngFor="let member of achievement.teamMembers"
+                class="team-member"
+                [href]="member.linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+                [attr.aria-label]="'Open LinkedIn profile of ' + member.name"
+                title="LinkedIn"
+              >
+                <svg class="icon-ln" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    fill="currentColor"
+                    d="M20.45 20.45h-3.56v-5.6c0-1.34-.02-3.06-1.87-3.06-1.88 0-2.17 1.46-2.17 2.96v5.7H9.29V9h3.41v1.56h.05c.48-.9 1.65-1.86 3.4-1.86 3.64 0 4.31 2.4 4.31 5.52v6.23ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45Z"
+                  />
+                </svg>
+                <span class="member-name">{{ member.name }}</span>
+              </a>
             </div>
           </div>
 
@@ -124,6 +139,26 @@
           </div>
 
           <p class="achievement-description">{{ achievement.description }}</p>
+
+          <div class="achievement-actions">
+            <a
+              *ngFor="let project of achievement.projectDetails"
+              class="project-btn"
+              [href]="project.projectUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              [attr.aria-label]="'Open GitHub repository: ' + (project.projectName || 'Project')"
+              title="View on GitHub"
+            >
+              <svg class="icon-gh" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  fill="currentColor"
+                  d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.8-.26.8-.57v-2.02c-3.2.7-3.87-1.37-3.87-1.37-.53-1.35-1.28-1.71-1.28-1.71-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.2-3.08-.12-.29-.52-1.48.12-3.08 0 0 .98-.31 3.2 1.18a11.08 11.08 0 0 1 5.82 0c2.22-1.49 3.2-1.18 3.2-1.18.64 1.6.24 2.79.12 3.08.75.8 1.2 1.83 1.2 3.08 0 4.41-2.7 5.39-5.26 5.68.41.35.78 1.05.78 2.12v3.14c0 .31.21.68.81.56A11.51 11.51 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"
+                />
+              </svg>
+              {{ project.projectName || 'View Project' }}
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -133,8 +168,8 @@
       <div
         *ngFor="let cert of certifications"
         class="certification-card"
-        [class.hidden]="!shouldShowItem(cert)">
-
+        [class.hidden]="!shouldShowItem(cert)"
+      >
         <div class="certification-image">
           <img [src]="cert.image" [alt]="cert.name" />
         </div>
@@ -167,8 +202,8 @@
       <div
         *ngFor="let badge of badges"
         class="badge-card"
-        [class.hidden]="!shouldShowItem(badge)">
-
+        [class.hidden]="!shouldShowItem(badge)"
+      >
         <div class="badge-image">
           <img [src]="badge.image" [alt]="badge.name" />
         </div>
