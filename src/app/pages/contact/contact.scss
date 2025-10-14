@@ -10,6 +10,8 @@ $medium-blue: #7ba2b3;
 $dark-blue: #1a659e;
 $darkest-blue: #004e89;
 $black: #010b13;
+$card-bg: #1b233d; // same as .project-card
+$white: #ffffff;
 
 .contact-container {
   min-height: 100vh;
@@ -27,16 +29,17 @@ $black: #010b13;
 }
 
 .contact-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 25px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  background: $card-bg;           // same as project card
+  padding: 5px;                   // same as project card
+  overflow: hidden;
+  box-shadow: 0 7px 20px 0 rgba(100, 100, 111, 0.2);
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 1000px;
   width: 100%;
-  overflow: hidden;
-  min-height: 600px;
+  min-height: 520px;
+  animation: fadeIn 0.6s ease-out;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -44,67 +47,34 @@ $black: #010b13;
   }
 }
 
-// Left Section Styles
+/* Left Section */
 .contact-info {
-  background: linear-gradient(135deg, $darkest-blue, $dark-blue);
-  color: white;
-  padding: 3rem;
+  background: lighten($card-bg, 6%); // subtle inner surface
+  color: $white;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid $white;          // mirrors the .top-section white border
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
+
+  // remove old decorative bubbles if they exist
+  &::before,
+  &::after {
+    content: none;
+  }
 
   @media (max-width: 768px) {
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
   }
 
-  // Decorative background elements
-  &::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 100px;
-    height: 100px;
-    background: rgba($primary-orange, 0.2);
-    border-radius: 50%;
-    z-index: 1;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -30px;
-    left: -30px;
-    width: 60px;
-    height: 60px;
-    background: rgba($light-orange, 0.3);
-    border-radius: 50%;
-    z-index: 1;
-  }
-
   .contact-title {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     line-height: 1.2;
-    background: linear-gradient(135deg, white, $lightest-orange);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    position: relative;
-    z-index: 2;
-
-    @media (max-width: 768px) {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 2rem;
-    }
+    color: $white; // solid to match project card vibe
   }
 
   .contact-details {
@@ -115,16 +85,17 @@ $black: #010b13;
   .contact-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    transition: all 0.3s ease;
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+    padding: 0.9rem;
+    background: lighten($card-bg, 10%);
+    border-radius: 12px;
+    transition: all 0.25s ease;
+    border: 1px solid rgba(255,255,255,0.15);
 
     &:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateX(5px);
+      background: lighten($card-bg, 13%);
+      transform: translateX(4px);
     }
 
     @media (max-width: 768px) {
@@ -133,11 +104,11 @@ $black: #010b13;
     }
 
     .contact-icon {
-      font-size: 1.5rem;
-      width: 40px;
-      height: 40px;
-      background: rgba($primary-orange, 0.2);
+      font-size: 1.25rem;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
+      background: rgba(255,255,255,0.08);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -147,171 +118,152 @@ $black: #010b13;
     .contact-text {
       .contact-label {
         font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.8);
-        margin-bottom: 0.3rem;
+        color: rgba(255, 255, 255, 0.75);
+        margin-bottom: 0.2rem;
         font-weight: 500;
       }
 
       .contact-link {
-        color: white;
+        color: $white;
         text-decoration: none;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         font-weight: 600;
-        transition: color 0.3s ease;
+        transition: color 0.2s ease;
 
         &:hover {
-          color: $lightest-orange;
+          color: rgba(255,255,255,0.85);
         }
+      }
+    }
+  }
 
-        @media (max-width: 480px) {
-          font-size: 1rem;
-        }
+  .social-icons {
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 1rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background-color: #1a659e;
+      transition: all 0.3s ease;
+      position: relative;
+      border: 2px solid #004e89;
+      text-decoration: none;
+
+      &:hover {
+        transform: translateY(-3px) rotate(15deg);
+        background-color: #ff6b35;
+        border-color: #fb986a;
+        box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+      }
+
+      svg, img {
+        width: 20px;
+        height: 20px;
+        filter: brightness(0) invert(1); // makes icons white like the footer
+        transition: transform 0.3s ease;
+        z-index: 1;
+      }
+
+      &:hover svg,
+      &:hover img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  /* Socials */
+  .socials {
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+
+    .socials-label {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+
+    .socials-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      text-decoration: none;
+      transition: all 0.25s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .social-icon {
+        font-size: 1.05rem;
+      }
+
+      .social-text {
+        font-weight: 600;
       }
     }
   }
 }
 
-// Right Section Styles
-.contact-form-section {
-  padding: 3rem;
+/* Right Section: Picture Card */
+.profile-card {
+  padding: 2rem;
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  // same inner surface style as left panel
+  background: lighten($card-bg, 6%);
+  border: 1px solid $white;
+  border-radius: 15px;
 
   @media (max-width: 768px) {
-    padding: 2rem;
+    padding: 1.5rem;
   }
-}
 
-.contact-form {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-
-  .form-group {
-    margin-bottom: 2rem;
+  .profile-image-wrap {
     position: relative;
-
-    .form-input {
-      width: 100%;
-      padding: 1.2rem 1rem 0.8rem;
-      border: 2px solid #e1e5e9;
-      border-radius: 12px;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      background: rgba(255, 255, 255, 0.8);
-      color: $darkest-blue;
-
-      &:focus {
-        outline: none;
-        border-color: $primary-orange;
-        box-shadow: 0 0 0 3px rgba($primary-orange, 0.1);
-        background: white;
-      }
-
-      &:focus + .form-label,
-      &:not(:placeholder-shown) + .form-label {
-        transform: translateY(-0.5rem) scale(0.85);
-        color: $primary-orange;
-      }
-
-      &.form-textarea {
-        resize: vertical;
-        min-height: 120px;
-        padding-top: 1.5rem;
-      }
-
-      &::placeholder {
-        color: transparent;
-      }
-    }
-
-    .form-label {
-      position: absolute;
-      left: 1rem;
-      top: 1.2rem;
-      color: #64748b;
-      font-size: 1rem;
-      font-weight: 500;
-      pointer-events: none;
-      transition: all 0.3s ease;
-      background: white;
-      padding: 0 0.5rem;
-    }
-
-    .error-message {
-      color: #ef4444;
-      font-size: 0.85rem;
-      margin-top: 0.5rem;
-      padding-left: 0.5rem;
-    }
-  }
-
-  .submit-button {
-    width: 100%;
-    padding: 1.2rem;
+    padding: 8px;
+    border-radius: 22px;
     background: linear-gradient(135deg, $primary-orange, $secondary-orange);
-    color: white;
-    border: none;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .profile-image {
+    display: block;
+    width: clamp(220px, 40vw, 360px);
+    height: clamp(220px, 40vw, 360px);
+    object-fit: cover;
     border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba($primary-orange, 0.3);
-
-    &:hover:not(:disabled) {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba($primary-orange, 0.4);
-    }
-
-    &:active:not(:disabled) {
-      transform: translateY(0);
-    }
-
-    &:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-    }
-  }
-
-  .status-message {
-    margin-top: 1rem;
-    padding: 1rem;
-    border-radius: 10px;
-    font-weight: 500;
-    text-align: center;
-
-    &.success {
-      background: rgba(34, 197, 94, 0.1);
-      color: #166534;
-      border: 1px solid rgba(34, 197, 94, 0.3);
-    }
-
-    &.error {
-      background: rgba(239, 68, 68, 0.1);
-      color: #991b1b;
-      border: 1px solid rgba(239, 68, 68, 0.3);
-    }
+    background: #eaeaea;
   }
 }
 
-// Animations
+/* Animation */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.contact-card {
-  animation: fadeIn 0.6s ease-out;
-}
-
-// Responsive adjustments
+/* Mobile tweaks */
 @media (max-width: 480px) {
   .contact-info {
     .contact-item {
