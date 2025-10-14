@@ -40,7 +40,7 @@ export class Projects {
       title: "Smart Guard",
       description: "A personal portfolio website showcasing my projects and skills.",
       tags: ["blockchain", "docker"],
-      image: "https://github.com/SanskariWolf/SmartGuard/raw/master/assets/Logo.webp",
+      image: "https://raw.githubusercontent.com/SanskariWolf/SmartGuard/refs/heads/alpha/assets/Logo.webp",
       link: "https://github.com/SanskariWolf/SmartGuard" // Replace with your project link
     },
     {
