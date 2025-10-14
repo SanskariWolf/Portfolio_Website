@@ -36,6 +36,14 @@ export class Projects {
 
   projects: Project[] = [
     {
+      id: 2,
+      title: "Smart Guard",
+      description: "A personal portfolio website showcasing my projects and skills.",
+      tags: ["blockchain", "docker"],
+      image: "https://github.com/SanskariWolf/SmartGuard/raw/master/assets/Logo.webp",
+      link: "https://github.com/SanskariWolf/SmartGuard" // Replace with your project link
+    },
+    {
       id: 1,
       title: "Portfolio Website",
       description: "A personal portfolio website showcasing my projects and skills.",
