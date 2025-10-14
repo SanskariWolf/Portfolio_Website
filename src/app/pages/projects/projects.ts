@@ -38,7 +38,7 @@ export class Projects {
     {
       id: 2,
       title: "Smart Guard",
-      description: "A personal portfolio website showcasing my projects and skills.",
+      description: "An Imitation Learning Fuzzer, a tool designed to find vulnerabilities in Ethereum smart contracts.",
       tags: ["blockchain", "docker"],
       image: "https://raw.githubusercontent.com/SanskariWolf/SmartGuard/refs/heads/alpha/assets/Logo.webp",
       link: "https://github.com/SanskariWolf/SmartGuard" // Replace with your project link
