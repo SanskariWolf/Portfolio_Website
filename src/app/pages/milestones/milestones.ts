@@ -109,7 +109,7 @@ export class Milestones {
       tags: ['blockchain', 'webdev'],
       description: '',
       image:
-        './certificates/BlockathonCognizance2025IITRoorkie.png',
+        './achievements/BlockathonCognizance2025IITRoorkie.png',
     },
     {
       id: 4,
@@ -124,7 +124,7 @@ export class Milestones {
       tags: ['cybersecurity'],
       description: '',
       image:
-        './38801eda-8879-4632-ad74-e38bc529f059_page-0001.jpg',
+        './achievements/GooseCTF25WarwickCyberSecuritySociety.jpg',
 
     },
     {
@@ -142,14 +142,14 @@ export class Milestones {
       description:
         'SmartGuard - AI-based Fuzzer for Smart Contracts. The fuzzing policy, which is used to generate transactions, is represented by an ensemble of neural networks and is learned from thousands of high-quality sequences of transactions generated using symbolic execution.',
       image:
-        'https://media.licdn.com/dms/image/v2/D5622AQEvI7QOOQ4wyw/feedshare-shrink_800/B56ZYl2evLHQAg-/0/1744391794412?e=1762992000&v=beta&t=x08LF6gsYCw4a-W0cbZ1HwTEP2vV8J78WO5NRancliQ',
+        './achievements/RegionalHack2025EduchainXHackQuest.jpg',
       projectDetails:[
       {projectName: 'SmartGuard',
       projectUrl: 'https://github.com/SanskariWolf/SmartGuard'}]
     },
     {
       id: 2,
-      competition: "Designathon'24-25",
+      competition: "Designathon'24",
       organizer: 'Strokes | The IIITN Design Club',
       position: '2nd',
       teamName: 'The Hephaetus Guild',
@@ -162,7 +162,7 @@ export class Milestones {
       description:
         'Created a comprehensive space for individuals to connect together to achieve emotion liberation. MindLamp is open space for the individuals to express their vulnerabilities and find catharsis.',
       image:
-        'https://media.licdn.com/dms/image/v2/D5622AQEd_mDsefGwSg/feedshare-shrink_1280/B56ZRhR3pMHwAk-/0/1736798891144?e=1762992000&v=beta&t=d0SFl-YcABUTWtXEGCyBdBiWJk8ciAlRjvPgdAAm1QU',
+        './achievements/Designathon2024StrokesIIITN.jpg',
       projectDetails: [{projectName: 'MindLamp',
       projectUrl: 'https://github.com/SanskariWolf/Mind-Lamp'},{projectName: 'TruthIn',
       projectUrl: 'https://github.com/SanskariWolf/TruthIn-Lamp'}]
@@ -182,7 +182,7 @@ export class Milestones {
       description:
         'Blockchain based system for the voting process of India. This project was aimed towards the security and stability of the voting process.',
       image:
-        'https://media.licdn.com/dms/image/v2/D5622AQFGzCDhTdjnGA/feedshare-shrink_800/feedshare-shrink_800/0/1720455670112?e=1762992000&v=beta&t=N1tUYIJGakx56tgpUg4mw4YPfaRYLhgbVVacowu1n6E',
+        './achievements/HackMait3Impulse2024IOSDMAIT.jpg',
       projectDetails: [{projectName: 'Blockchain Voting System',
       projectUrl: 'https://github.com/your-username/blockchain-voting'}]
     }
