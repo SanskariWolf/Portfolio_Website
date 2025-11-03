@@ -94,14 +94,32 @@ export class Milestones {
   // Sample data
   achievements: Achievement[] = [
     {
+      id: 5,
+      competition: 'Bloackathon',
+      organizer: 'Cognizance 2025 - IIT Roorkee',
+      position: '1st',
+      teamName: 'Jack of Jokers',
+      teamMembers: [
+        { name: 'Divyanshh Kalra', linkedin: 'https://www.linkedin.com/in/divyanshh-kalra/' },
+        { name: 'Vipul Kohli', linkedin: 'https://www.linkedin.com/in/vipul-kohli-31bb3921b/' },
+        { name: 'Tanush Purwar', linkedin: 'https://www.linkedin.com/in/tanushpurwar/' },
+        { name: 'Piyush Mittal', linkedin: 'https://www.linkedin.com/in/piyush-mittal-hi/' },
+
+      ],
+      tags: ['blockchain', 'webdev'],
+      description: '',
+      image:
+        './certificates/BlockathonCognizance2025IITRoorkie.png',
+    },
+    {
       id: 4,
       competition: 'GooseCTF',
-      organizer: 'Warwick Cyber Security Society ',
+      organizer: 'Warwick Cyber Security Society',
       position: '3rd',
       teamName: 'Obsidian Howlers',
       teamMembers: [
         { name: 'Pratham Gupta', linkedin: 'https://www.linkedin.com/in/prathamgupta006/' },
-        { name: 'Tanush Purwar', linkedin: 'https://www.linkedin.com/in/tanushpurwar/' }
+        { name: 'Tanush Purwar', linkedin: 'https://www.linkedin.com/in/tanushpurwar/' },
       ],
       tags: ['cybersecurity'],
       description: '',
@@ -273,6 +291,18 @@ export class Milestones {
   ];
 
   badges: Badge[] = [
+    {
+      id: 10,
+      name: 'OSMOSIS Association Spooky CTF 2025',
+      tags: ['cybersecurity'],
+      image: './badges/SpookyCTF2025.png'
+    },
+    {
+      id: 9,
+      name: 'DEADFACE CTF 2025 Competitor',
+      tags: ['cybersecurity'],
+      image: './badges/DEADFACECTF2025.png'
+    },
     {
       id: 8,
       name: 'Introduction to Cybersecurity',
