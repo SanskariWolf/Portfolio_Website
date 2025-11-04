@@ -94,6 +94,21 @@ export class Milestones {
   // Sample data
   achievements: Achievement[] = [
     {
+      id: 7,
+      competition: 'Google CTF 2025',
+      organizer: 'Google',
+      position: '97 (Top 100)',
+      teamName: 'Obsidian Howlers',
+      teamMembers: [
+        { name: 'Tanush Purwar', linkedin: 'https://www.linkedin.com/in/tanushpurwar/' }
+      ],
+      tags: ['cybersecurity'],
+      description: '',
+      image:
+        './achievements/GoogleCTF2025.png',
+
+    },
+    {
       id: 6,
       competition: 'BH USA CTF 2025',
       organizer: 'Black Hat USA & Bugcrowd',
