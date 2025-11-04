@@ -94,8 +94,23 @@ export class Milestones {
   // Sample data
   achievements: Achievement[] = [
     {
+      id: 6,
+      competition: 'BH USA CTF 2025',
+      organizer: 'Black Hat USA & Bugcrowd',
+      position: 'Top 100',
+      teamName: 'Obsidian Howlers',
+      teamMembers: [
+        { name: 'Tanush Purwar', linkedin: 'https://www.linkedin.com/in/tanushpurwar/' }
+      ],
+      tags: ['cybersecurity'],
+      description: '',
+      image:
+        './achievements/BHUSA2025.webp',
+
+    },
+    {
       id: 5,
-      competition: 'Bloackathon',
+      competition: 'Blockathon',
       organizer: 'Cognizance 2025 - IIT Roorkee',
       position: '1st',
       teamName: 'Jack of Jokers',
@@ -113,7 +128,7 @@ export class Milestones {
     },
     {
       id: 4,
-      competition: 'GooseCTF',
+      competition: 'GooseCTF 2025',
       organizer: 'Warwick Cyber Security Society',
       position: '3rd',
       teamName: 'Obsidian Howlers',
