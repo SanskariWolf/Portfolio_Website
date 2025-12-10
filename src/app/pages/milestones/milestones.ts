@@ -220,6 +220,16 @@ export class Milestones {
 
   certifications: Certification[] = [
     {
+      id: 12,
+      name: 'CC Course Pre-assessment',
+      issuingOrganization: 'ISC2',
+      issueDate: 'December 2025',
+      expiryDate: 'December 2028',
+      certificateId: '66418b20-187b-40e7-b1bd-ebae3c2d992c',
+      tags: ['cybersecurity'],
+      image: './certificates/ISC2_CC.jpg'
+    },
+    {
       id: 11,
       name: 'Junior Cybersecurity Analyst Career Path',
       issuingOrganization: 'Cisco Networking Academy',
