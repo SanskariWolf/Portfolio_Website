@@ -173,9 +173,11 @@ export class Milestones {
         'SmartGuard - AI-based Fuzzer for Smart Contracts. The fuzzing policy, which is used to generate transactions, is represented by an ensemble of neural networks and is learned from thousands of high-quality sequences of transactions generated using symbolic execution.',
       image:
         './achievements/RegionalHack2025EduchainXHackQuest.jpg',
-      projectDetails:[
-      {projectName: 'SmartGuard',
-      projectUrl: 'https://github.com/SanskariWolf/SmartGuard'}]
+      projectDetails: [
+        {
+          projectName: 'SmartGuard',
+          projectUrl: 'https://github.com/SanskariWolf/SmartGuard'
+        }]
     },
     {
       id: 2,
@@ -193,9 +195,13 @@ export class Milestones {
         'Created a comprehensive space for individuals to connect together to achieve emotion liberation. MindLamp is open space for the individuals to express their vulnerabilities and find catharsis.',
       image:
         './achievements/Designathon2024StrokesIIITN.jpg',
-      projectDetails: [{projectName: 'MindLamp',
-      projectUrl: 'https://github.com/SanskariWolf/Mind-Lamp'},{projectName: 'TruthIn',
-      projectUrl: 'https://github.com/SanskariWolf/TruthIn-Lamp'}]
+      projectDetails: [{
+        projectName: 'MindLamp',
+        projectUrl: 'https://github.com/SanskariWolf/Mind-Lamp'
+      }, {
+        projectName: 'TruthIn',
+        projectUrl: 'https://github.com/SanskariWolf/TruthIn-Lamp'
+      }]
     },
     {
       id: 1,
@@ -213,12 +219,24 @@ export class Milestones {
         'Blockchain based system for the voting process of India. This project was aimed towards the security and stability of the voting process.',
       image:
         './achievements/HackMait3Impulse2024IOSDMAIT.jpg',
-      projectDetails: [{projectName: 'Blockchain Voting System',
-      projectUrl: 'https://github.com/your-username/blockchain-voting'}]
+      projectDetails: [{
+        projectName: 'Blockchain Voting System',
+        projectUrl: 'https://github.com/your-username/blockchain-voting'
+      }]
     }
   ];
 
   certifications: Certification[] = [
+    {
+      id: 16,
+      name: 'Pre Security Learning Path',
+      issuingOrganization: 'TryHackMe',
+      issueDate: 'May 2026',
+      expiryDate: 'May 2029',
+      certificateId: 'THM-PCBFNBVSB5',
+      tags: ['cybersecurity'],
+      image: './certificates/PreSecurity_TryHackme.png'
+    },
     {
       id: 15,
       name: 'CC Domain 3: Access Control Concepts',
@@ -310,7 +328,7 @@ export class Milestones {
       issuingOrganization: 'Internshala Trainings',
       issueDate: 'July 2024',
       certificateId: '9lzi0oq2gxy',
-      tags: ['uiux','webdev'],
+      tags: ['uiux', 'webdev'],
       image: 'https://training-uploads.internshala.com/certificates/COC-9lzi0oq2gxy.jpg'
     },
     {
@@ -319,7 +337,7 @@ export class Milestones {
       issuingOrganization: 'Internshala Trainings',
       issueDate: 'March 2024',
       certificateId: 'drk32gmvi1e',
-      tags: ['uiux','webdev'],
+      tags: ['uiux', 'webdev'],
       image: 'https://training-uploads.internshala.com/certificates/COC-drk32gmvi1e.jpg'
     },
     {
